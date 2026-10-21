@@ -1,0 +1,1268 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Portafolio creativo de Valentina Rodríguez Díaz, diseñadora gráfica."
+    />
+
+    <meta name="theme-color" content="#fff0f2" />
+
+    <title>Valentina Rodríguez | Portafolio Creativo</title>
+
+    <!-- FAVICON -->
+    
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS ORIGINAL -->
+    <link rel="stylesheet" href="estilo.css" />
+
+    <!--
+    ESTILOS EXCLUSIVOS DEL NOKIA REALISTA.
+    No afectan la portada ni las carpetas.
+  -->
+
+    <style>
+            #contacto.contacto-nokia {
+              background: #fff2f3;
+              color: #171515;
+              padding: 90px var(--margen, 6vw);
+              overflow: hidden;
+            }
+
+            #contacto .contacto-realista-contenido {
+              display: grid;
+              grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+              gap: 50px;
+              align-items: center;
+              width: 100%;
+              margin-top: 35px;
+            }
+
+            #contacto .contacto-realista-texto {
+              min-width: 0;
+            }
+
+            #contacto .contacto-realista-texto h2 {
+              margin: 0;
+              font-size: clamp(48px, 7vw, 90px);
+              font-weight: 900;
+              letter-spacing: -0.08em;
+              line-height: 0.95;
+            }
+
+            #contacto .contacto-realista-texto h2 em {
+              color: #f276b6;
+              font-family: "Playfair Display", serif;
+              font-style: italic;
+            }
+
+            #contacto .contacto-realista-texto > p {
+              max-width: 390px;
+              margin-top: 26px;
+              font-size: 14px;
+              line-height: 1.8;
+            }
+
+            /* CONTENEDOR DEL NOKIA */
+
+            #contacto .nokia-realista-contenedor {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              min-width: 0;
+            }
+
+
+      #contacto .nokia-realista {
+          display: block;
+          position: relative;
+          width: min(100%, 650px);
+          max-width: 650px;
+          height: auto;
+          margin: 0 auto;
+          padding: 0;
+          flex: 0 1 650px;
+      }
+
+      
+          
+
+            #contacto .nokia-imagen {
+              display: block;
+              position: relative;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              margin: 0;
+              object-fit: contain;
+            }
+
+            /* FORMULARIO ALINEADO SOBRE LA PANTALLA */
+
+            #contacto .nokia-realista > .nokia-pantalla-formulario {
+              display: block;
+              position: absolute;
+              top: 25%;
+              left: 14%;
+              width: 72%;
+              height: 39%;
+              z-index: 2;
+
+              margin: 0;
+              padding: 9px;
+              box-sizing: border-box;
+
+              background: #f5f5f5;
+              color: #171515;
+
+              overflow-x: hidden;
+              overflow-y: auto;
+
+              scrollbar-width: thin;
+              scrollbar-color: #888 transparent;
+              border: 0;
+              border-radius: 2px;
+            }
+
+            #contacto .nokia-formulario {
+              position: static;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              width: 100%;
+              max-width: 100%;
+              margin: 0;
+              padding: 0;
+
+              color: #171515;
+              background: transparent;
+            }
+
+            #contacto .nokia-form-titulo {
+              margin: 0 0 8px;
+              padding: 0;
+              text-align: center;
+              font-size: 11px;
+              font-weight: 900;
+              line-height: 1.3;
+              letter-spacing: -0.02em;
+              color: #171515;
+            }
+
+            #contacto .nokia-formulario label {
+              display: block;
+              margin: 3px 0 0;
+              padding: 0;
+              font-size: 10px;
+              font-weight: 800;
+              color: #171515;
+            }
+
+            #contacto .nokia-formulario input,
+            #contacto .nokia-formulario textarea {
+              display: block;
+              position: static;
+
+              width: 100%;
+              min-width: 0;
+              max-width: 100%;
+
+              margin: 0;
+              padding: 7px;
+
+              box-sizing: border-box;
+              border: 1px solid #171515;
+              border-radius: 0;
+
+              background: #ffffff;
+              color: #171515;
+              font-family: "DM Sans", sans-serif;
+              font-size: 11px;
+              font-weight: 500;
+              line-height: 1.4;
+
+              box-shadow: none;
+              outline-offset: 2px;
+            }
+
+            #contacto .nokia-formulario textarea {
+              height: 55px;
+              min-height: 55px;
+              resize: none;
+            }
+
+            #contacto .nokia-formulario input:focus,
+            #contacto .nokia-formulario textarea:focus {
+              outline: 2px solid #f276b6;
+            }
+
+            #contacto .nokia-enviar {
+              display: block;
+              position: static;
+
+              width: 100%;
+              margin: 8px 0 0;
+              padding: 10px 7px;
+
+              background: #f276b6;
+              color: #171515;
+              border: 1px solid #171515;
+              border-radius: 0;
+
+              font-family: "DM Sans", sans-serif;
+              font-size: 10px;
+              font-weight: 900;
+
+              cursor: pointer;
+            }
+
+            #contacto .nokia-enviar:hover {
+              background: #f8c8df;
+            }
+
+            #contacto .nokia-ayuda {
+              margin: 6px 0 0;
+              font-size: 9px;
+              line-height: 1.4;
+              text-align: center;
+              color: #555;
+            }
+
+            @media (max-width: 900px) {
+              #contacto .contacto-realista-contenido {
+                grid-template-columns: 1fr;
+                gap: 40px;
+              }
+
+              #contacto .nokia-realista {
+                width: min(100%, 650px);
+              }
+            }
+
+            @media (max-width: 520px) {
+              #contacto.contacto-nokia {
+                padding: 65px 20px;
+              }
+
+              #contacto .contacto-realista-texto h2 {
+                font-size: clamp(42px, 12vw, 62px);
+              }
+
+              #contacto .nokia-realista {
+                width: min(100%, 380px);
+              }
+
+              #contacto .nokia-realista > .nokia-pantalla-formulario {
+                padding: 6px;
+              }
+
+              #contacto .nokia-formulario {
+                gap: 3px;
+              }
+
+              #contacto .nokia-formulario label {
+                font-size: 9px;
+              }
+
+              #contacto .nokia-formulario input,
+              #contacto .nokia-formulario textarea {
+                padding: 5px;
+                font-size: 10px;
+              }
+            }
+    </style>
+  </head>
+
+  <body>
+    <!-- ==========================================
+       NAVEGACIÓN
+  ========================================== -->
+
+    <header class="encabezado">
+      <a href="#inicio" class= aria-label="Volver al inicio">
+        <span></span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#sobre-mi">SOBRE MÍ</a>
+        <a href="#proyectos">ARCHIVO</a>
+        <a href="#galeria">GALERÍA</a>
+        <a href="#servicios">SERVICIOS</a>
+        <a href="#contacto">CONTACTO ↗</a>
+      </nav>
+
+      <button
+        class="menu-movil"
+        id="menuMovil"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="menuNavegacion"
+      >
+      
+      </button>
+    </header>
+
+    <main>
+      <!-- ==========================================
+         01. PORTADA ORIGINAL
+    ========================================== -->
+
+      <section class="portada" id="inicio">
+        <div class="portada-cabecera">
+        
+        </div>
+
+        <div class="portada-grid" aria-hidden="true"></div>
+
+        <div class="portada-contenido">
+          <div class="texto-portada">
+            <p class="saludo">DISEÑADORA GRÁFICA · CREADORA VISUAL</p>
+
+            <h1>
+              Ideas que<br />
+              hacen<br />
+              <span class="palabra-cursiva">ruido.</span>
+            </h1>
+
+            <p class="descripcion">
+              Creo marcas, imágenes y universos visuales con personalidad
+              propia. Diseño para comunicar, experimentar y contar historias.
+            </p>
+
+            <a class="boton" href="#proyectos"> EXPLORAR MI TRABAJO ↘ </a>
+          </div>
+
+          <!-- FOTO ORIGINAL -->
+
+          <div class="composicion">
+            <div class="foto-marco carnet-rosa">
+              <span
+                class="carnet-estrella estrella-izquierda"
+                aria-hidden="true"
+                >★</span
+              >
+
+              <span class="carnet-estrella estrella-derecha" aria-hidden="true"
+                >★</span
+              >
+
+              <div class="carnet-papel">
+                <img
+                  src="Img/Pink White Playful Collage Creative Team Profile Instagram Post.gif"
+                  class="foto-principal"
+                  alt="Fotografía de Valentina"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portada-pie">
+          <span>BRANDING / DIGITAL / IMPRESO</span>
+          <span>01 — PORTAFOLIO CREATIVO</span>
+          <a href="#sobre-mi">BAJAR ↓</a>
+        </div>
+      </section>
+      
+<!-- CARRUSEL INFINITO: ESTRELLAS BLANCAS -->
+<div class="marquesina-estrellas" aria-hidden="true">
+  <div class="marquesina-pista" id="pista-estrellas">
+    <div class="marquesina-grupo" id="grupo-estrellas">
+      <!-- Las estrellas se insertan con JavaScript -->
+    </div>
+  </div>
+</div>
+
+<style>
+.marquesina-estrellas {
+  width: 100%;
+  background: #ea7ab3;
+  overflow: hidden;
+  padding: 25px 0;
+  pointer-events: none;
+}
+
+.marquesina-pista {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation: desplazarEstrellas 20s linear infinite;
+  will-change: transform;
+}
+
+.marquesina-grupo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 35px;
+  padding-right: 35px;
+}
+
+.marquesina-grupo svg {
+  display: block;
+  width: 95px;
+  height: 95px;
+  flex-shrink: 0;
+  fill: #ffffff;
+}
+
+.marquesina-grupo svg:nth-child(2n) {
+  width: 70px;
+  height: 70px;
+  transform: rotate(18deg);
+}
+
+.marquesina-grupo svg:nth-child(3n) {
+  width: 110px;
+  height: 110px;
+  transform: rotate(-12deg);
+}
+
+@keyframes desplazarEstrellas {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
+
+<script>
+(function () {
+  const pista = document.getElementById("pista-estrellas");
+  const grupo = document.getElementById("grupo-estrellas");
+
+  const estrella = `
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <path d="
+        M50 1 L61 35 L96 15 L75 47
+        L99 58 L65 62 L80 97 L49 75
+        L19 99 L35 65 L1 57 L34 45
+        L17 13 L44 34 Z
+      " />
+    </svg>
+  `;
+
+  // Suficientes estrellas para cubrir pantallas grandes
+  function construir() {
+    grupo.innerHTML = "";
+
+    const cantidad = Math.max(
+      12,
+      Math.ceil(window.innerWidth / 90) + 3
+    );
+
+    grupo.innerHTML = estrella.repeat(cantidad);
+
+    pista.querySelectorAll(
+      ".marquesina-grupo:not(#grupo-estrellas)"
+    ).forEach(el => el.remove());
+
+    const copia = grupo.cloneNode(true);
+    copia.removeAttribute("id");
+    copia.setAttribute("aria-hidden", "true");
+    pista.appendChild(copia);
+  }
+
+  construir();
+  window.addEventListener("resize", construir);
+})();
+</script>
+
+
+      <!-- ==========================================
+         02. SOBRE MÍ
+    ========================================== -->
+
+      <section class="sobre-mi seccion" id="sobre-mi">
+  <p class="numero">01 / SOBRE MÍ</p>
+
+  <div class="sobre-mi-dinamico">
+
+    <!-- IZQUIERDA: CÁMARA -->
+    <div class="cyber-escena">
+  <div class="camara-img-wrap">
+    <img
+      src="Img/Camara.png"
+      alt="Cámara rosa retro"
+      class="camara-img"
+    >
+  </div>
+</div>
+
+    <!-- DERECHA: SOBRE MÍ -->
+    <div class="sobre-mi-info">
+      <h3>
+        Soy Valentina Rodríguez Díaz, diseñadora gráfica. Me gusta explorar, crear y encontrar formas diferentes de contar historias.
+      </h3>
+
+      <p>
+        Desarrollo identidades visuales, piezas para redes sociales, publicidad, material POP, ilustraciones y contenido audiovisual. Me caracterizo por mi creatividad, adaptabilidad y atención al detalle.
+      </p>
+
+      <div class="skills-porcentajes">
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>Illustrator</span>
+            <strong>95%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 95%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>Photoshop</span>
+            <strong>90%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 90%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>Figma</span>
+            <strong>82%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 82%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>InDesign</span>
+            <strong>80%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 80%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>After Effects</span>
+            <strong>75%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 75%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>CapCut</span>
+            <strong>88%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 88%"></span></div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-head">
+            <span>Lightroom</span>
+            <strong>78%</strong>
+          </div>
+          <div class="skill-bar"><span style="width: 78%"></span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+      <!-- ==========================================
+         03. ARCHIVO CREATIVO
+    ========================================== -->
+
+      <section class="proyectos seccion" id="proyectos">
+        <div class="archivo-cabecera">
+          <p class="numero">02 / ARCHIVO CREATIVO</p>
+          <span>SELECCIONA UNA CARPETA ↘</span>
+        </div>
+
+        <div class="archivo-titulo">
+          <h2>
+            Cosas que<br />
+            <em>he creado.</em>
+          </h2>
+
+          <p>
+            Ideas, experimentos y proyectos que han tomado forma. Explora cada
+            carpeta para descubrir mi trabajo.
+          </p>
+        </div>
+
+        <!-- FILTROS -->
+
+        <div class="filtros-carpetas" aria-label="Filtrar carpetas">
+          <button
+            class="filtro-carpeta activo"
+            type="button"
+            data-filtro="todos"
+            aria-pressed="true"
+          >
+            TODOS
+          </button>
+
+          <button
+            class="filtro-carpeta"
+            type="button"
+            data-filtro="branding"
+            aria-pressed="false"
+          >
+            BRANDING
+          </button>
+
+          <button
+            class="filtro-carpeta"
+            type="button"
+            data-filtro="publicidad"
+            aria-pressed="false"
+          >
+            PUBLICIDAD
+          </button>
+
+          <button
+            class="filtro-carpeta"
+            type="button"
+            data-filtro="packaging"
+            aria-pressed="false"
+          >
+            PACKAGING
+          </button>
+
+          <button
+            class="filtro-carpeta"
+            type="button"
+            data-filtro="editorial"
+            aria-pressed="false"
+          >
+            EDITORIAL
+          </button>
+        </div>
+
+        <!-- CARPETAS -->
+
+        <div class="archivador">
+          <!-- MÁGARA -->
+
+          <article class="carpeta carpeta-magara" data-categoria="branding">
+            <a href="#magara" class="carpeta-enlace" data-proyecto="magara">
+              <span class="pestana">01 — BRANDING</span>
+              <span class="carpeta-numero">01</span>
+              <span class="carpeta-nombre">Mágara</span>
+
+              <span class="carpeta-descripcion">
+                Identidad visual · Caribe colombiano
+              </span>
+
+              <span class="carpeta-abrir"> ABRIR ARCHIVO ↗ </span>
+            </a>
+          </article>
+
+          <!-- AMANO -->
+
+          <article class="carpeta carpeta-amano" data-categoria="packaging">
+            <a href="#amano" class="carpeta-enlace" data-proyecto="amano">
+              <span class="pestana">02 — PACKAGING</span>
+              <span class="carpeta-numero">02</span>
+              <span class="carpeta-nombre">Amano.</span>
+
+              <span class="carpeta-descripcion">
+                Productos · Dirección de arte
+              </span>
+
+              <span class="carpeta-abrir"> ABRIR ARCHIVO ↗ </span>
+            </a>
+          </article>
+
+          <!-- OTRA MIRADA -->
+
+          <article
+            class="carpeta carpeta-experimental"
+            data-categoria="editorial"
+          >
+            <a href="#grafico" class="carpeta-enlace" data-proyecto="grafico">
+              <span class="pestana">03 — EDITORIAL</span>
+              <span class="carpeta-numero">03</span>
+              <span class="carpeta-nombre">Otra mirada.</span>
+
+              <span class="carpeta-descripcion">
+                Tipografía · Collage · Composición
+              </span>
+
+              <span class="carpeta-abrir"> ABRIR ARCHIVO ↗ </span>
+            </a>
+          </article>
+
+          <!-- HAZTE VER -->
+
+          <article
+            class="carpeta carpeta-publicidad"
+            data-categoria="publicidad"
+          >
+            <a
+              href="#publicidad"
+              class="carpeta-enlace"
+              data-proyecto="publicidad"
+            >
+              <span class="pestana">04 — PUBLICIDAD</span>
+              <span class="carpeta-numero">04</span>
+              <span class="carpeta-nombre">Hazte ver.</span>
+
+              <span class="carpeta-descripcion">
+                Campañas · Comunicación visual
+              </span>
+
+              <span class="carpeta-abrir"> ABRIR ARCHIVO ↗ </span>
+            </a>
+          </article>
+        </div>
+
+        <div class="archivo-pie">
+          <span>04 CARPETAS</span>
+          <span>DISEÑADAS PARA EXPLORAR</span>
+          <span>2026 ©</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         MODAL EDITORIAL
+    ========================================== -->
+
+      <dialog
+        id="hojaProyecto"
+        class="hoja-proyecto"
+        aria-labelledby="tituloHojaProyecto"
+      >
+        <div class="hoja-cabecera">
+          <span id="categoriaHojaProyecto"> ARCHIVO CREATIVO </span>
+
+          <button
+            type="button"
+            id="cerrarHojaProyecto"
+            aria-label="Cerrar proyecto"
+          >
+            ✕ CERRAR
+          </button>
+        </div>
+
+        <div class="hoja-contenido">
+          <p class="hoja-etiqueta">VR® — ARCHIVO CREATIVO / 2026</p>
+
+          <h2 id="tituloHojaProyecto">Proyecto</h2>
+
+          <p id="descripcionHojaProyecto"></p>
+
+          <div id="imagenesHojaProyecto" class="hoja-galeria"></div>
+
+          <div class="hoja-informacion">
+            <div>
+              <span>EL PROYECTO / 01</span>
+              <h3>Detrás de la idea.</h3>
+            </div>
+
+            <p id="textoHojaProyecto"></p>
+          </div>
+        </div>
+
+        <div class="hoja-pie">
+          <span>VR® — DISEÑO GRÁFICO</span>
+
+          <button type="button" id="cerrarHojaAbajo">CERRAR ARCHIVO ↑</button>
+        </div>
+      </dialog>
+
+      <!-- ==========================================
+         04. GALERÍA VISUAL
+    ========================================== -->
+
+      <section class="galeria-trabajos seccion" id="galeria">
+        
+<!-- ==========================================
+     GALERÍA COLLAGE Y2K
+========================================== -->
+
+
+
+<section class="galeria-trabajos seccion" id="galeria">
+
+  <div class="galeria-portada">
+
+    <!-- ENCABEZADO EDITORIAL -->
+    <div class="galeria-portada-header">
+
+      <div class="galeria-mini-texto">
+        <span>WELCOME TO MY</span>
+        <span>VR® CREATIVE ARCHIVE</span>
+      </div>
+
+      <div class="galeria-titulo-composicion">
+        <span class="galeria-bloque-rosa"></span>
+
+        <h2>
+          VISTO DE
+          <em>CERCA.</em>
+        </h2>
+      </div>
+
+      <div class="galeria-detalles">
+        <span>VALENTINA RODRÍGUEZ</span>
+        <span>GRAPHIC DESIGN / 2026</span>
+      </div>
+
+    </div>
+
+    <!-- ABANICO DE PROYECTOS -->
+    <div class="galeria-abanico-escena">
+
+      <div class="galeria-abanico">
+
+        <figure class="abanico-foto foto-1">
+          <img
+            src="Img/Cartel tropical Mágara en pared soleada.png"
+            alt="Proyecto Mágara"
+          >
+          <figcaption>MÁGARA / 01</figcaption>
+        </figure>
+
+        <figure class="abanico-foto foto-2">
+          <img
+            src="Img/amano.jpeg"
+            alt="Proyecto Amano"
+          >
+          <figcaption>AMANO / 02</figcaption>
+        </figure>
+
+        <figure class="abanico-foto foto-3">
+          <img
+            src="Img/Revista Fraternos en sala retro musical.png"
+            alt="Proyecto editorial"
+          >
+          <figcaption>EDITORIAL / 03</figcaption>
+        </figure>
+
+        <figure class="abanico-foto foto-4">
+          <img
+            src="Img/publicidad-01.jpg"
+            alt="Proyecto Publicidad"
+          >
+          <figcaption>PUBLICIDAD / 04</figcaption>
+        </figure>
+
+      </div>
+
+      <!-- CÍRCULO INFERIOR -->
+      <div class="galeria-disco" aria-hidden="true">
+        <span>VR®</span>
+        <small>CREATIVE PORTFOLIO</small>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</section>
+
+      </section>
+
+      <!-- ==========================================
+         05. GRABADORA
+    ========================================== -->
+
+     
+
+<!-- ==========================================
+     05. SOUNDTRACK CREATIVO
+     GRABADORA IZQUIERDA + SPOTIFY DERECHA
+========================================== -->
+
+<section class="soundtrack-section seccion" id="soundtrack">
+
+  <p class="numero">04 / SOUNDTRACK CREATIVO</p>
+
+  <div class="soundtrack-layout">
+
+    <!-- IZQUIERDA: GRABADORA ROSA -->
+    <div class="boombox-panel">
+
+      <img
+        src="Img/grabadora.png"
+        alt="Grabadora rosa retro"
+        class="boombox-img"
+      >
+
+    </div>
+
+    <!-- DERECHA: SPOTIFY -->
+    <div class="cassette-panel">
+
+      <h2>
+        Mi creatividad tiene
+        <em>soundtrack.</em>
+      </h2>
+
+      <p class="soundtrack-texto">
+        Cada idea tiene un ritmo distinto.
+        Esta es la música que acompaña
+        mi proceso creativo.
+      </p>
+
+      <div class="spotify-y2k">
+
+        <div class="spotify-etiqueta">
+          <span>✳ VR® MIXTAPE</span>
+          <span>SIDE A ♡</span>
+        </div>
+
+        <div class="spotify-marco">
+
+          <iframe
+            id="spotifyPlayer"
+            title="Mi soundtrack creativo en Spotify"
+            src="https://open.spotify.com/embed/playlist/54H2hj7urLzAH6Uqz5PTmA"
+            width="100%"
+            height="352"
+            style="border:0;border-radius:12px"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+
+        </div>
+
+        <p class="spotify-nota">
+          PRESS PLAY ♡ — MI SOUNDTRACK CREATIVO
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</div>
+
+</section>
+
+      <!-- ==========================================
+         06. SERVICIOS
+    ========================================== -->
+
+      <section class="servicios seccion" id="servicios">
+        <p class="numero">08 / QUÉ PUEDO HACER</p>
+
+        <div class="servicios-contenido">
+          <h2>
+            ¿Lo hacemos<br />
+            <em>visual?</em>
+          </h2>
+
+          
+<div class="lista-servicios">
+
+  <details class="servicio-acordeon">
+    <summary>
+      <span class="servicio-numero">01</span>
+      <div class="servicio-info">
+        <h3>Branding e identidad visual</h3>
+        <p>Logos, manuales de marca y sistemas visuales.</p>
+      </div>
+      <span class="servicio-toggle"></span>
+    </summary>
+
+    <div class="servicio-desplegable">
+      <p>
+        Creo identidades visuales que reflejan la
+        personalidad de cada marca. Desde el concepto
+        y el logotipo hasta la selección de colores,
+        tipografías, manuales de marca y aplicaciones
+        gráficas.
+      </p>
+    </div>
+  </details>
+
+  <details class="servicio-acordeon">
+    <summary>
+      <span class="servicio-numero">02</span>
+      <div class="servicio-info">
+        <h3>Diseño para redes sociales</h3>
+        <p>Posts, carruseles, historias y campañas.</p>
+      </div>
+      <span class="servicio-toggle"></span>
+    </summary>
+
+    <div class="servicio-desplegable">
+      <p>
+        Diseño contenido visual para redes sociales:
+        publicaciones, carruseles, historias,
+        portadas y piezas para campañas digitales.
+        Cada diseño se adapta a la identidad de la
+        marca y al mensaje que quiere comunicar.
+      </p>
+    </div>
+  </details>
+
+  <details class="servicio-acordeon">
+    <summary>
+      <span class="servicio-numero">03</span>
+      <div class="servicio-info">
+        <h3>Publicidad y material POP</h3>
+        <p>Pendones, volantes y piezas promocionales.</p>
+      </div>
+      <span class="servicio-toggle"></span>
+    </summary>
+
+    <div class="servicio-desplegable">
+      <p>
+        Desarrollo piezas publicitarias para formatos
+        impresos y digitales: afiches, volantes,
+        pendones, material para puntos de venta
+        y campañas promocionales que buscan
+        captar la atención del público.
+      </p>
+    </div>
+  </details>
+
+  <details class="servicio-acordeon">
+    <summary>
+      <span class="servicio-numero">04</span>
+      <div class="servicio-info">
+        <h3>Contenido audiovisual</h3>
+        <p>Grabación y edición de videos para redes sociales.</p>
+      </div>
+      <span class="servicio-toggle"></span>
+    </summary>
+
+    <div class="servicio-desplegable">
+      <p>
+        Creo y edito contenido audiovisual para
+        comunicar ideas de forma dinámica.
+        Incluye reels, videos promocionales,
+        edición creativa, transiciones y contenido
+        adaptado a plataformas digitales.
+      </p>
+    </div>
+  </details>
+
+  <details class="servicio-acordeon">
+    <summary>
+      <span class="servicio-numero">05</span>
+      <div class="servicio-info">
+        <h3>Ilustración y diseño editorial</h3>
+        <p>Recursos gráficos, composición y conceptos visuales.</p>
+      </div>
+      <span class="servicio-toggle"></span>
+    </summary>
+
+    <div class="servicio-desplegable">
+      <p>
+        Desarrollo ilustraciones y composiciones
+        gráficas para revistas, publicaciones,
+        carteles y proyectos editoriales.
+        Combino tipografía, imágenes y elementos
+        visuales para construir narrativas creativas.
+      </p>
+    </div>
+  </details>
+
+</div>
+
+      </section>
+
+      <!-- ==========================================
+       <!-- ==========================================
+     07. CONTACTO - NOKIA CSS
+========================================== -->
+
+<section class="contacto-retro seccion" id="contacto">
+
+  <p class="numero">09 / CONTACTO</p>
+
+  <div class="contacto-retro-grid">
+
+    <!-- TEXTO -->
+    <div class="contacto-retro-texto">
+      <h2>
+        Hablemos<br>
+        de tu <em>proyecto.</em>
+      </h2>
+
+      <p>
+        ¿Tienes una idea en mente? Cuéntame qué quieres crear.
+        Me encantará conocer tu proyecto y ayudarte a volverlo visual.
+      </p>
+    </div>
+
+    <!-- CELULAR -->
+    <div class="telefono-retro-wrap">
+
+      <div class="telefono-retro">
+
+        <!-- parte superior -->
+        <div class="telefono-retro-top">
+          <div class="telefono-retro-orificios">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="telefono-retro-logo" aria-hidden="true"></div>
+        </div>
+
+        <!-- pantalla -->
+        <div class="telefono-retro-screen">
+
+          <div class="telefono-retro-status">
+            <span>11:11</span>
+            <span>@valentina</span>
+            <span>▂ ▃ ▅</span>
+          </div>
+
+          <form class="telefono-retro-form">
+
+            <h3>NUEVO MENSAJE ♡</h3>
+
+            <label for="retroNombre">Nombre</label>
+            <input
+              type="text"
+              id="retroNombre"
+              name="nombre"
+              placeholder="Tu nombre"
+            >
+
+            <label for="retroCorreo">Correo</label>
+            <input
+              type="email"
+              id="retroCorreo"
+              name="correo"
+              placeholder="tu@email.com"
+            >
+
+            <label for="retroAsunto">Asunto</label>
+            <input
+              type="text"
+              id="retroAsunto"
+              name="asunto"
+              placeholder="Tu proyecto"
+            >
+
+            <label for="retroMensaje">Mensaje</label>
+            <textarea
+              id="retroMensaje"
+              name="mensaje"
+              placeholder="Cuéntame tu idea"
+            ></textarea>
+
+            <button type="submit">ENVIAR ↗</button>
+
+          </form>
+
+          <div class="telefono-retro-bottom-text">
+            <span>Opciones</span>
+            <span>Atrás</span>
+          </div>
+
+        </div>
+
+        <!-- teclado -->
+  <div class="telefono-retro-controls">
+
+  <!-- BOTONES SUPERIORES -->
+  <div class="telefono-retro-actions">
+    <button type="button" class="action-btn green">⌂</button>
+
+    <div class="telefono-retro-nav">
+      <button type="button" class="nav-btn top">▲</button>
+
+      <div class="nav-middle-row">
+        <button type="button" class="nav-btn left">◀</button>
+
+        <div class="nav-center">
+          <div class="nav-center-inner"></div>
+        </div>
+
+        <button type="button" class="nav-btn right">▶</button>
+      </div>
+
+      <button type="button" class="nav-btn bottom">▼</button>
+    </div>
+
+    <button type="button" class="action-btn pink">✿</button>
+  </div>
+
+  <!-- TECLADO NUMÉRICO -->
+  <div class="telefono-retro-keypad">
+    <button type="button" class="key"><strong>1</strong></button>
+    <button type="button" class="key"><strong>2</strong><span>abc</span></button>
+    <button type="button" class="key"><strong>3</strong><span>def</span></button>
+
+    <button type="button" class="key"><strong>4</strong><span>ghi</span></button>
+    <button type="button" class="key"><strong>5</strong><span>jkl</span></button>
+    <button type="button" class="key"><strong>6</strong><span>mno</span></button>
+
+    <button type="button" class="key"><strong>7</strong><span>pqrs</span></button>
+    <button type="button" class="key"><strong>8</strong><span>tuv</span></button>
+    <button type="button" class="key"><strong>9</strong><span>wxyz</span></button>
+
+    <button type="button" class="key"><strong>*</strong></button>
+    <button type="button" class="key"><strong>0</strong><span>_</span></button>
+    <button type="button" class="key"><strong>#</strong></button>
+  </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- ==========================================
+       PIE DE PÁGINA
+  ========================================== -->
+
+    <footer class="pie-pagina">
+      <a href="#inicio" class="logo"> VR<span>®</span> </a>
+
+      <p>Diseñado con curiosidad y personalidad.</p>
+
+      <span> © VALENTINA RODRÍGUEZ DÍAZ · 2026 </span>
+    </footer>
+
+    <!-- JAVASCRIPT PRINCIPAL: UNA SOLA VEZ -->
+
+    <script src="script.js"></script>
+    
+<!-- VISOR DE FOTOGRAFÍAS -->
+
+<dialog id="visorGaleria" class="visor-galeria">
+
+  <button
+    type="button"
+    class="visor-cerrar"
+    id="cerrarVisorGaleria"
+    aria-label="Cerrar fotografía"
+  >
+    ✕
+  </button>
+
+  <img
+    id="imagenVisorGaleria"
+    src=""
+    alt="Fotografía ampliada del proyecto"
+  >
+
+  <p id="tituloVisorGaleria"></p>
+
+</dialog>
+
+  </body>
+</html>
