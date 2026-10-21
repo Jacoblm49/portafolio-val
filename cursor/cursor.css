@@ -1,0 +1,55 @@
+/* Ocultarlo solo cuando el cursor personalizado está activo. */
+@media (any-hover: hover) and (any-pointer: fine) {
+  html.cursor-personalizado-activo,
+  html.cursor-personalizado-activo *,
+  html.cursor-personalizado-activo *::before,
+  html.cursor-personalizado-activo *::after,
+  html.cursor-personalizado-activo dialog::backdrop {
+    cursor: none !important;
+  }
+}
+
+/* Cursor personalizado */
+#cursor-custom {
+  position: fixed;
+  inset: auto;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: visible;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  background-image: url('../Img/Cursor .png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2147483647;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+  opacity: 0;
+}
+
+#cursor-custom::backdrop {
+  background: transparent;
+  pointer-events: none;
+  backdrop-filter: none;
+}
+
+#cursor-custom.cursor-visible {
+  opacity: 1;
+}
+
+/* Efecto al pasar sobre elementos clickeables */
+#cursor-custom.cursor-hover {
+   background-image: url('../Img/mano.png');
+  transform: translate(-50%, -50%) scale(1.2) rotate(15deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cursor-custom { transition: none; }
+}
