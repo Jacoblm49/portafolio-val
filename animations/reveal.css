@@ -1,0 +1,34 @@
+/* Revelados por scroll. Sin JS, todo permanece visible. */
+[data-reveal] {
+  --reveal-enabled: 1;
+  --reveal-duration: 1000ms;
+  --reveal-ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Esperamos en la posición original: las medidas y el scroll no cambian.
+   El desplazamiento solo existe mientras se reproduce la entrada. */
+[data-reveal].reveal-pending {
+  opacity: 0;
+}
+
+/* Un contenedor de sección introduce el fondo sin desplazar a sus hijos. */
+[data-reveal="fade"] {
+  --reveal-duration: 200ms;
+}
+
+/* El foco nunca debe quedar en contenido invisible. */
+[data-reveal].reveal-pending:focus-within {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    --reveal-duration: 180ms;
+  }
+}
+
+@media print {
+  [data-reveal].reveal-pending {
+    opacity: 1 !important;
+  }
+}

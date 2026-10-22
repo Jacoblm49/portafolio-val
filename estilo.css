@@ -2497,8 +2497,8 @@ button:focus-visible {
 }
 
 .modal-proyecto::backdrop {
-  /* background: rgba(22, 15, 20, 0.72); */
-  /* backdrop-filter: blur(5px); */
+  background: rgba(22, 15, 20, 0.72);
+  backdrop-filter: blur(5px);
 }
 
 .modal-proyecto[open] {

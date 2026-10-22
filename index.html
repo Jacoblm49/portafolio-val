@@ -31,6 +31,10 @@
     <!-- CURSOR PERSONALIZADO -->
     <link rel="stylesheet" href="cursor/cursor.css" />
 
+    <!-- REVELADOS REUTILIZABLES POR SCROLL -->
+    <link rel="stylesheet" href="animations/reveal.css" />
+    <script src="animations/reveal.js" defer></script>
+
     <!--
     ESTILOS EXCLUSIVOS DEL NOKIA REALISTA.
     No afectan la portada ni las carpetas.
@@ -328,7 +332,7 @@
          01. PORTADA ORIGINAL
     ========================================== -->
 
-      <section class="portada" id="inicio">
+      <section class="portada" id="inicio" data-reveal="fade">
         <div class="portada-cabecera">
         
         </div>
@@ -336,7 +340,7 @@
         <div class="portada-grid" aria-hidden="true"></div>
 
         <div class="portada-contenido">
-          <div class="texto-portada">
+          <div class="texto-portada" data-reveal="left">
             <p class="saludo">DISEÑADORA GRÁFICA · CREADORA VISUAL</p>
 
             <h1>
@@ -355,7 +359,7 @@
 
           <!-- FOTO ORIGINAL -->
 
-          <div class="composicion">
+          <div class="composicion" data-reveal="right" data-reveal-delay="60">
             <div class="foto-marco carnet-rosa">
               <span
                 class="carnet-estrella estrella-izquierda"
@@ -378,7 +382,7 @@
           </div>
         </div>
 
-        <div class="portada-pie">
+        <div class="portada-pie" data-reveal="up">
           <span>BRANDING / DIGITAL / IMPRESO</span>
           <span>01 — PORTAFOLIO CREATIVO</span>
           <a href="#sobre-mi">BAJAR ↓</a>
@@ -492,13 +496,13 @@
          02. SOBRE MÍ
     ========================================== -->
 
-      <section class="sobre-mi seccion" id="sobre-mi">
-  <p class="numero">01 / SOBRE MÍ</p>
+      <section class="sobre-mi seccion" id="sobre-mi" data-reveal="fade">
+  <p class="numero" data-reveal="down">01 / SOBRE MÍ</p>
 
   <div class="sobre-mi-dinamico">
 
     <!-- IZQUIERDA: CÁMARA -->
-    <div class="cyber-escena">
+    <div class="cyber-escena" data-reveal="left">
   <div class="camara-img-wrap">
     <img
       src="Img/Camara.png"
@@ -509,7 +513,7 @@
 </div>
 
     <!-- DERECHA: SOBRE MÍ -->
-    <div class="sobre-mi-info">
+    <div class="sobre-mi-info" data-reveal="right" data-reveal-delay="60">
       <h3>
         Soy Valentina Rodríguez Díaz, diseñadora gráfica. Me gusta explorar, crear y encontrar formas diferentes de contar historias.
       </h3>
@@ -519,7 +523,7 @@
       </p>
 
       <div class="skills-porcentajes">
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up">
           <div class="skill-head">
             <span>Illustrator</span>
             <strong>95%</strong>
@@ -527,7 +531,7 @@
           <div class="skill-bar"><span style="width: 95%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up" data-reveal-delay="60">
           <div class="skill-head">
             <span>Photoshop</span>
             <strong>90%</strong>
@@ -535,7 +539,7 @@
           <div class="skill-bar"><span style="width: 90%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up" data-reveal-delay="120">
           <div class="skill-head">
             <span>Figma</span>
             <strong>82%</strong>
@@ -543,7 +547,7 @@
           <div class="skill-bar"><span style="width: 82%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up" data-reveal-delay="180">
           <div class="skill-head">
             <span>InDesign</span>
             <strong>80%</strong>
@@ -551,7 +555,7 @@
           <div class="skill-bar"><span style="width: 80%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up">
           <div class="skill-head">
             <span>After Effects</span>
             <strong>75%</strong>
@@ -559,7 +563,7 @@
           <div class="skill-bar"><span style="width: 75%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up" data-reveal-delay="60">
           <div class="skill-head">
             <span>CapCut</span>
             <strong>88%</strong>
@@ -567,7 +571,7 @@
           <div class="skill-bar"><span style="width: 88%"></span></div>
         </div>
 
-        <div class="skill-item">
+        <div class="skill-item" data-reveal="up" data-reveal-delay="120">
           <div class="skill-head">
             <span>Lightroom</span>
             <strong>78%</strong>
@@ -584,13 +588,13 @@
          03. ARCHIVO CREATIVO
     ========================================== -->
 
-      <section class="proyectos seccion" id="proyectos">
-        <div class="archivo-cabecera">
-          <p class="numero">02 / ARCHIVO CREATIVO</p>
+      <section class="proyectos seccion" id="proyectos" data-reveal="fade">
+        <div class="archivo-cabecera" data-reveal="down">
+          <p class="numero" data-reveal="down">02 / ARCHIVO CREATIVO</p>
           <span>SELECCIONA UNA CARPETA ↘</span>
         </div>
 
-        <div class="archivo-titulo">
+        <div class="archivo-titulo" data-reveal="left" data-reveal-delay="60">
           <h2>
             Cosas que<br />
             <em>he creado.</em>
@@ -604,7 +608,7 @@
 
         <!-- FILTROS -->
 
-        <div class="filtros-carpetas" aria-label="Filtrar carpetas">
+        <div class="filtros-carpetas" aria-label="Filtrar carpetas" data-reveal="up">
           <button
             class="filtro-carpeta activo"
             type="button"
@@ -656,7 +660,7 @@
         <div class="archivador">
           <!-- MÁGARA -->
 
-          <article class="carpeta carpeta-magara" data-categoria="branding">
+          <article class="carpeta carpeta-magara" data-categoria="branding" data-reveal="left">
             <a href="#magara" class="carpeta-enlace" data-proyecto="magara">
               <span class="pestana">01 — BRANDING</span>
               <span class="carpeta-numero">01</span>
@@ -672,7 +676,7 @@
 
           <!-- AMANO -->
 
-          <article class="carpeta carpeta-amano" data-categoria="packaging">
+          <article class="carpeta carpeta-amano" data-categoria="packaging" data-reveal="up" data-reveal-delay="60">
             <a href="#amano" class="carpeta-enlace" data-proyecto="amano">
               <span class="pestana">02 — PACKAGING</span>
               <span class="carpeta-numero">02</span>
@@ -691,7 +695,7 @@
           <article
             class="carpeta carpeta-experimental"
             data-categoria="editorial"
-          >
+           data-reveal="down" data-reveal-delay="120">
             <a href="#grafico" class="carpeta-enlace" data-proyecto="grafico">
               <span class="pestana">03 — EDITORIAL</span>
               <span class="carpeta-numero">03</span>
@@ -710,7 +714,7 @@
           <article
             class="carpeta carpeta-publicidad"
             data-categoria="publicidad"
-          >
+           data-reveal="right" data-reveal-delay="180">
             <a
               href="#publicidad"
               class="carpeta-enlace"
@@ -729,7 +733,7 @@
           </article>
         </div>
 
-        <div class="archivo-pie">
+        <div class="archivo-pie" data-reveal="up">
           <span>04 CARPETAS</span>
           <span>DISEÑADAS PARA EXPLORAR</span>
           <span>2026 ©</span>
@@ -787,7 +791,7 @@
          04. GALERÍA VISUAL
     ========================================== -->
 
-      <section class="galeria-trabajos seccion" id="galeria">
+      <section class="galeria-trabajos seccion" id="galeria" data-reveal="fade">
         
 <!-- ==========================================
      GALERÍA COLLAGE Y2K
@@ -795,19 +799,19 @@
 
 
 
-<section class="galeria-trabajos seccion" id="galeria">
+<section class="galeria-trabajos seccion" id="galeria" data-reveal="fade">
 
   <div class="galeria-portada">
 
     <!-- ENCABEZADO EDITORIAL -->
     <div class="galeria-portada-header">
 
-      <div class="galeria-mini-texto">
+      <div class="galeria-mini-texto" data-reveal="left">
         <span>WELCOME TO MY</span>
         <span>VR® CREATIVE ARCHIVE</span>
       </div>
 
-      <div class="galeria-titulo-composicion">
+      <div class="galeria-titulo-composicion" data-reveal="down" data-reveal-delay="60">
         <span class="galeria-bloque-rosa"></span>
 
         <h2>
@@ -816,7 +820,7 @@
         </h2>
       </div>
 
-      <div class="galeria-detalles">
+      <div class="galeria-detalles" data-reveal="right" data-reveal-delay="120">
         <span>VALENTINA RODRÍGUEZ</span>
         <span>GRAPHIC DESIGN / 2026</span>
       </div>
@@ -828,7 +832,7 @@
 
       <div class="galeria-abanico">
 
-        <figure class="abanico-foto foto-1">
+        <figure class="abanico-foto foto-1" data-reveal="left">
           <img
             src="Img/Cartel tropical Mágara en pared soleada.png"
             alt="Proyecto Mágara"
@@ -836,7 +840,7 @@
           <figcaption>MÁGARA / 01</figcaption>
         </figure>
 
-        <figure class="abanico-foto foto-2">
+        <figure class="abanico-foto foto-2" data-reveal="up" data-reveal-delay="60">
           <img
             src="Img/amano.jpeg"
             alt="Proyecto Amano"
@@ -844,7 +848,7 @@
           <figcaption>AMANO / 02</figcaption>
         </figure>
 
-        <figure class="abanico-foto foto-3">
+        <figure class="abanico-foto foto-3" data-reveal="down" data-reveal-delay="120">
           <img
             src="Img/Revista Fraternos en sala retro musical.png"
             alt="Proyecto editorial"
@@ -852,7 +856,7 @@
           <figcaption>EDITORIAL / 03</figcaption>
         </figure>
 
-        <figure class="abanico-foto foto-4">
+        <figure class="abanico-foto foto-4" data-reveal="right" data-reveal-delay="180">
           <img
             src="Img/publicidad-01.jpg"
             alt="Proyecto Publicidad"
@@ -863,7 +867,7 @@
       </div>
 
       <!-- CÍRCULO INFERIOR -->
-      <div class="galeria-disco" aria-hidden="true">
+      <div class="galeria-disco" aria-hidden="true" data-reveal="up">
         <span>VR®</span>
         <small>CREATIVE PORTFOLIO</small>
       </div>
@@ -889,14 +893,14 @@
      GRABADORA IZQUIERDA + SPOTIFY DERECHA
 ========================================== -->
 
-<section class="soundtrack-section seccion" id="soundtrack">
+<section class="soundtrack-section seccion" id="soundtrack" data-reveal="fade">
 
-  <p class="numero">04 / SOUNDTRACK CREATIVO</p>
+  <p class="numero" data-reveal="down">04 / SOUNDTRACK CREATIVO</p>
 
   <div class="soundtrack-layout">
 
     <!-- IZQUIERDA: GRABADORA ROSA -->
-    <div class="boombox-panel">
+    <div class="boombox-panel" data-reveal="left">
 
       <img
         src="Img/grabadora.png"
@@ -907,7 +911,7 @@
     </div>
 
     <!-- DERECHA: SPOTIFY -->
-    <div class="cassette-panel">
+    <div class="cassette-panel" data-reveal="right" data-reveal-delay="60">
 
       <h2>
         Mi creatividad tiene
@@ -920,7 +924,7 @@
         mi proceso creativo.
       </p>
 
-      <div class="spotify-y2k">
+      <div class="spotify-y2k" data-reveal="up" data-reveal-delay="60">
 
         <div class="spotify-etiqueta">
           <span>✳ VR® MIXTAPE</span>
@@ -964,11 +968,11 @@
          06. SERVICIOS
     ========================================== -->
 
-      <section class="servicios seccion" id="servicios">
-        <p class="numero">08 / QUÉ PUEDO HACER</p>
+      <section class="servicios seccion" id="servicios" data-reveal="fade">
+        <p class="numero" data-reveal="down">08 / QUÉ PUEDO HACER</p>
 
         <div class="servicios-contenido">
-          <h2>
+          <h2 data-reveal="left">
             ¿Lo hacemos<br />
             <em>visual?</em>
           </h2>
@@ -976,7 +980,7 @@
           
 <div class="lista-servicios">
 
-  <details class="servicio-acordeon">
+  <details class="servicio-acordeon" data-reveal="up">
     <summary>
       <span class="servicio-numero">01</span>
       <div class="servicio-info">
@@ -997,7 +1001,7 @@
     </div>
   </details>
 
-  <details class="servicio-acordeon">
+  <details class="servicio-acordeon" data-reveal="up" data-reveal-delay="60">
     <summary>
       <span class="servicio-numero">02</span>
       <div class="servicio-info">
@@ -1018,7 +1022,7 @@
     </div>
   </details>
 
-  <details class="servicio-acordeon">
+  <details class="servicio-acordeon" data-reveal="up" data-reveal-delay="120">
     <summary>
       <span class="servicio-numero">03</span>
       <div class="servicio-info">
@@ -1039,7 +1043,7 @@
     </div>
   </details>
 
-  <details class="servicio-acordeon">
+  <details class="servicio-acordeon" data-reveal="up" data-reveal-delay="180">
     <summary>
       <span class="servicio-numero">04</span>
       <div class="servicio-info">
@@ -1060,7 +1064,7 @@
     </div>
   </details>
 
-  <details class="servicio-acordeon">
+  <details class="servicio-acordeon" data-reveal="up">
     <summary>
       <span class="servicio-numero">05</span>
       <div class="servicio-info">
@@ -1090,14 +1094,14 @@
      07. CONTACTO - NOKIA CSS
 ========================================== -->
 
-<section class="contacto-retro seccion" id="contacto">
+<section class="contacto-retro seccion" id="contacto" data-reveal="fade">
 
-  <p class="numero">09 / CONTACTO</p>
+  <p class="numero" data-reveal="down">09 / CONTACTO</p>
 
   <div class="contacto-retro-grid">
 
     <!-- TEXTO -->
-    <div class="contacto-retro-texto">
+    <div class="contacto-retro-texto" data-reveal="left">
       <h2>
         Hablemos<br>
         de tu <em>proyecto.</em>
@@ -1110,7 +1114,7 @@
     </div>
 
     <!-- CELULAR -->
-    <div class="telefono-retro-wrap">
+    <div class="telefono-retro-wrap" data-reveal="right" data-reveal-delay="60">
 
       <div class="telefono-retro">
 
@@ -1235,7 +1239,7 @@
        PIE DE PÁGINA
   ========================================== -->
 
-    <footer class="pie-pagina">
+    <footer class="pie-pagina" data-reveal="fade">
       <a href="#inicio" class="logo"> VR<span>®</span> </a>
 
       <p>Diseñado con curiosidad y personalidad.</p>
