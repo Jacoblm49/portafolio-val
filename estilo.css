@@ -6385,6 +6385,7 @@ dialog.hoja-proyecto::backdrop {
     width: 70px;
     height: 140px;
     top: -45px;
+    display: none;
   }
 
   #galeria .galeria-mini-texto,
