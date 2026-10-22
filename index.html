@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="animations/reveal.css" />
     <script src="animations/reveal.js" defer></script>
 
+    <!-- CONTROL DE MÚSICA DE FONDO -->
+    <link rel="stylesheet" href="Audio/background-music.css" />
+
     <!--
     ESTILOS EXCLUSIVOS DEL NOKIA REALISTA.
     No afectan la portada ni las carpetas.
@@ -294,9 +297,29 @@
     </style>
   </head>
 
-  <body >
+<body class="entrada-pendiente">
     <!-- CURSOR PERSONALIZADO -->
     <div id="cursor-custom" aria-hidden="true"></div>
+
+    <!-- ENTRADA: EL CLIC DESBLOQUEA EL AUDIO EN EL NAVEGADOR -->
+    <div
+      class="entrada-musica"
+      id="entradaMusica"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tituloEntradaMusica"
+    >
+      <div class="entrada-musica-contenido">
+        <span class="entrada-musica-etiqueta">VR® · PORTAFOLIO CREATIVO</span>
+        <h1 id="tituloEntradaMusica">
+          Este portafolio<br />tiene <em>soundtrack.</em>
+        </h1>
+        <p>Activa el sonido y entra a mi universo visual.</p>
+        <button type="button" id="entrarPortafolio">
+          ENTRAR AL PORTAFOLIO ♫
+        </button>
+      </div>
+    </div>
 
     <!-- ==========================================
        NAVEGACIÓN
@@ -933,17 +956,10 @@
 
         <div class="spotify-marco">
 
-          <iframe
+          <div
             id="spotifyPlayer"
-            title="Mi soundtrack creativo en Spotify"
-            src="https://open.spotify.com/embed/playlist/54H2hj7urLzAH6Uqz5PTmA"
-            width="100%"
-            height="352"
-            style="border:0;border-radius:12px"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+            aria-label="Mi soundtrack creativo en Spotify"
+          ></div>
 
         </div>
 
@@ -1249,7 +1265,18 @@
 
     <!-- JAVASCRIPT PRINCIPAL: UNA SOLA VEZ -->
 
+    <audio id="musicaFondo" loop preload="auto" autoplay>
+      <source src="Audio/musicafondo.mpeg" type="audio/mpeg" />
+    </audio>
+
     <script src="script.js"></script>
+
+    <!-- MÚSICA DE FONDO -->
+    <script src="Audio/background-music.js"></script>
+
+    <!-- SINCRONIZACIÓN CON EL REPRODUCTOR DE SPOTIFY -->
+    <script src="Audio/spotify-sync.js"></script>
+    <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
 
     <!-- CURSOR PERSONALIZADO -->
     <script src="cursor/cursor.js"></script>

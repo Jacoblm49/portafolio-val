@@ -1,0 +1,184 @@
+.entrada-pendiente {
+  overflow: hidden;
+}
+
+.entrada-musica {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.7), transparent 30%),
+    linear-gradient(135deg, #ffc4df, #f276b6);
+  opacity: 1;
+  transition: opacity 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.entrada-musica[hidden] {
+  display: none;
+}
+
+.entrada-musica-contenido {
+  width: min(760px, 100%);
+  text-align: center;
+  color: #851c2b;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition:
+    opacity 500ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 500ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@starting-style {
+  .entrada-musica-contenido {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+}
+
+.entrada-musica.saliendo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.entrada-musica.saliendo .entrada-musica-contenido {
+  opacity: 0;
+  transform: translateY(-24px) scale(0.97);
+}
+
+.entrada-musica-etiqueta {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.entrada-musica h1 {
+  font-size: clamp(52px, 9vw, 120px);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+}
+
+.entrada-musica h1 em {
+  font-family: "Playfair Display", serif;
+  color: #fffdfb;
+}
+
+.entrada-musica p {
+  margin: 26px auto 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.entrada-musica button {
+  margin-top: 24px;
+  padding: 14px 22px;
+  border: 1px solid #851c2b;
+  border-radius: 999px;
+  background: #851c2b;
+  color: #fffdfb;
+  font: 800 10px/1 "DM Sans", sans-serif;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition:
+    background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.entrada-musica button:active {
+  transform: scale(0.97);
+}
+
+.entrada-musica button:focus-visible {
+  outline: 3px solid #fffdfb;
+  outline-offset: 4px;
+}
+
+.entrada-musica button:disabled {
+  cursor: wait;
+}
+
+.control-musica-fondo {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1000;
+  padding: 10px 14px;
+  border: 1px solid #851c2b;
+  border-radius: 999px;
+  background: #fffdfb;
+  color: #851c2b;
+  font: 700 10px/1 "DM Sans", sans-serif;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(102, 34, 56, 0.16);
+  transition:
+    color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.control-musica-fondo:active {
+  transform: scale(0.97);
+}
+
+.control-musica-fondo[aria-pressed="true"] {
+  background: #851c2b;
+  color: #fffdfb;
+}
+
+.control-musica-fondo:focus-visible {
+  outline: 3px solid #f276b6;
+  outline-offset: 3px;
+}
+
+.control-musica-fondo:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .entrada-musica button:hover:not(:disabled) {
+    background: #fffdfb;
+    color: #851c2b;
+    transform: translateY(-2px);
+  }
+
+  .control-musica-fondo:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .entrada-musica,
+  .entrada-musica-contenido {
+    transition: opacity 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .entrada-musica-contenido,
+  .entrada-musica.saliendo .entrada-musica-contenido {
+    transform: none;
+  }
+
+  .entrada-musica button {
+    transition:
+      background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      color 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .control-musica-fondo {
+    transition:
+      color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .control-musica-fondo:active,
+  .control-musica-fondo:hover:not(:disabled) {
+    transform: none;
+  }
+}

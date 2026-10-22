@@ -164,9 +164,20 @@
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initReveals, { once: true });
-  } else {
+  function startReveals() {
+    if (document.body?.classList.contains("entrada-pendiente")) {
+      document.addEventListener("portfolio:entered", initReveals, {
+        once: true
+      });
+      return;
+    }
+
     initReveals();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startReveals, { once: true });
+  } else {
+    startReveals();
   }
 })();
