@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const visor=document.getElementById('visorGaleria');
   const reducir=matchMedia('(prefers-reduced-motion: reduce)');
   let avance=0,anterior=0,pausa=false;
-  escena.addEventListener('pointerenter',()=>pausa=true);
+  escena.addEventListener('pointerenter',()=>pausa=false);
   escena.addEventListener('pointerleave',()=>pausa=false);
-  escena.addEventListener('focusin',()=>pausa=true);
+  escena.addEventListener('focusin',()=>pausa=false);
   escena.addEventListener('focusout',()=>pausa=false);
   function dibujar(t) {
     const dt=anterior?Math.min(t-anterior,50):0;anterior=t;

@@ -6127,7 +6127,7 @@ dialog.hoja-proyecto::backdrop {
 
 #galeria .galeria-portada {
   width: 100%;
-  min-height: 850px;
+  /* min-height: 850px; */
   position: relative;
   overflow: hidden;
   background: #ededed;
@@ -6204,6 +6204,11 @@ dialog.hoja-proyecto::backdrop {
   position: relative;
   height: 535px;
   overflow: hidden;
+  background-color: var(--rosa-claro);
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 45px 45px;
 }
 
 /* EL ABANICO COMPLETO SE BALANCEA */
@@ -6256,6 +6261,13 @@ dialog.hoja-proyecto::backdrop {
   object-fit: cover;
   display: block;
   border-radius: 5px;
+  filter: blur(8px);
+  transition: filter 0.4s ease;
+}
+
+#galeria .abanico-foto:hover img,
+#galeria .abanico-foto:focus-visible img {
+  filter: blur(0);
 }
 
 #galeria .abanico-foto figcaption {
@@ -6354,7 +6366,7 @@ dialog.hoja-proyecto::backdrop {
 @media (max-width: 900px) {
 
   #galeria .galeria-portada {
-    min-height: 730px;
+    /* min-height: 730px; */
   }
 
   #galeria .galeria-portada-header {
@@ -6369,7 +6381,7 @@ dialog.hoja-proyecto::backdrop {
 @media (max-width: 600px) {
 
   #galeria .galeria-portada {
-    min-height: 650px;
+    /* min-height: 650px; */
   }
 
   #galeria .galeria-portada-header {
@@ -6421,7 +6433,7 @@ dialog.hoja-proyecto::backdrop {
 /* MÁS ESPACIO PARA LAS FOTOGRAFÍAS */
 
 #galeria .galeria-portada {
-  min-height: 1050px;
+  /* min-height: 1050px; */
 }
 
 #galeria .galeria-abanico-escena {
@@ -6492,7 +6504,7 @@ dialog.hoja-proyecto::backdrop {
 
 @media (max-width: 900px) {
   #galeria .galeria-portada {
-    min-height: 850px;
+    /* min-height: 850px; */
   }
 
   #galeria .galeria-abanico-escena {
@@ -6508,7 +6520,7 @@ dialog.hoja-proyecto::backdrop {
 
 @media (max-width: 600px) {
   #galeria .galeria-portada {
-    min-height: 670px;
+    /* min-height: 670px; */
   }
 
   #galeria .galeria-abanico-escena {
@@ -7323,7 +7335,7 @@ dialog.hoja-proyecto::backdrop {
 #servicios .servicios-imagen {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 20px;
 
   width: 420px;
   max-width: 40%;
@@ -7461,7 +7473,11 @@ dialog#hojaProyecto[open] .hoja-contenido::before {
 #galeria .galeria-portada-header { display: none; }
 #galeria .galeria-abanico-escena.galeria-flotante {
   position: relative; height: clamp(480px, 55vw, 720px); overflow: hidden;
-  background: #191717; margin: 0; perspective: none; isolation: isolate;
+    background-color: #fdeff2;
+  background-image:
+    linear-gradient(rgba(255, 215, 223, 1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 215, 223, 1) 1px, transparent 1px);
+  background-size: 45px 45px;
 }
 #galeria .galeria-flotante .galeria-abanico,
 #galeria .galeria-flotante .galeria-abanico:hover {
@@ -7477,6 +7493,7 @@ dialog#hojaProyecto[open] .hoja-contenido::before {
 #galeria .galeria-flotante .abanico-foto img {
   display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
   border: 0; border-radius: 0; filter: brightness(.76);
+  filter: blur(2px);
 }
 #galeria .galeria-flotante .abanico-foto:hover img,
 #galeria .galeria-flotante .abanico-foto:focus-visible img { filter: brightness(1); }
