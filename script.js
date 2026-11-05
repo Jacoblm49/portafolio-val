@@ -110,35 +110,45 @@
        3. CONTENIDO DE LOS PROYECTOS
     ====================================== */
 
+    // FOTOS DEBAJO DE “DETRÁS DE LA IDEA”.
+    // Añade rutas entre comillas, separadas por comas, en cada proyecto.
+    const fotosDebajo = {
+      magara: ["Img/SEIIIIIIS.jpeg"], // Carpeta .Seis
+      amano: [],                     // Carpeta Publicidad
+      grafico: [],                   // Carpeta Otra mirada
+      publicidad: []                 // Carpeta Redes
+    };
+
     const proyectos = {
 
       magara: {
-        titulo: "Mágara.",
+        titulo: ".Seis",
         categoria: "01 / BRANDING",
 
         descripcion:
-          "Identidad visual · Caribe colombiano",
+          "Identidad visual · Agencia de publicidad",
 
         texto:
-          "Un universo visual inspirado en la identidad, los colores y la riqueza gráfica del Caribe colombiano. Incluye identidad visual, diseño de empaques, aplicaciones gráficas y contenido para redes sociales.",
+          "Seis personas, distintas ideas y un proyecto en común: .seis, nuestra agencia creativa. Me encargué de crear su identidad visual y diseñar para la marca, convirtiendo lo que somos como equipo en una propuesta gráfica con personalidad propia.",
 
         imagenes: [
           {
-            src: "Img/Cartel tropical Mágara en pared soleada.png",
+             src: "Img/puntoseis.png",
+          
             nombre: "Aplicación de marca"
           }
         ]
       },
 
       amano: {
-        titulo: "Amano.",
-        categoria: "02 / PACKAGING",
+        titulo: "Publicidad",
+        categoria: "02 / PUBLICIDAD",
 
         descripcion:
-          "Productos · Dirección de arte",
+          "Campañas · Comunicación visual",
 
         texto:
-          "Contenido digital para una marca de productos saludables, con una dirección visual limpia y una comunicación cercana. Incluye piezas para redes sociales, fotografía de producto y contenido audiovisual.",
+          "Seis personas, distintas ideas y un proyecto en común: .seis, nuestra agencia creativa. Me encargué de crear su identidad visual y diseñar para la marca, convirtiendo lo que somos como equipo en una propuesta gráfica con personalidad propia.",
 
         imagenes: [
           {
@@ -149,7 +159,7 @@
       },
 
       grafico: {
-        titulo: "Otra mirada.",
+        titulo: "Otra mirada",
         categoria: "03 / EDITORIAL",
 
         descripcion:
@@ -167,18 +177,18 @@
       },
 
       publicidad: {
-        titulo: "Hazte ver.",
-        categoria: "04 / PUBLICIDAD",
+        titulo: "Redes",
+        categoria: "04 / REDES",
 
         descripcion:
-          "Campañas · Comunicación visual",
+          "Contenido digital · Redes sociales",
 
         texto:
           "Piezas digitales e impresas creadas para comunicar promociones, fortalecer marcas y conectar con diferentes públicos.",
 
         imagenes: [
           {
-            src: "imagenes/publicidad-01.jpg",
+            src: "Img/SEIIIIIIS.jpeg",
             nombre: "Comunicación publicitaria"
           }
         ]
@@ -273,6 +283,17 @@
 
         galeriaModal.appendChild(figura);
       });
+
+      const fotosInferiores = document.getElementById("fotosDebajoProyecto");
+      fotosInferiores.replaceChildren();
+      (fotosDebajo[id] || []).forEach((ruta) => {
+        const foto = document.createElement("img");
+        foto.src = ruta;
+        foto.alt = "Detalle de " + proyecto.titulo;
+        foto.loading = "lazy";
+        fotosInferiores.appendChild(foto);
+      });
+      fotosInferiores.hidden = !fotosInferiores.children.length;
 
       // Abrir una sola vez.
       if (!modal.open) {
@@ -626,3 +647,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+/* Contacto - diario interactivo.
+   Para habilitar el envío mediante una app de correo,
+   coloca tu dirección real en EMAIL_DESTINO_DIARIO. */
+(() => {
+  const EMAIL_DESTINO_DIARIO = '';
+  const libro = document.getElementById('diarioLibro');
+  const portada = document.getElementById('diarioPortada');
+  const formulario = document.getElementById('diarioFormulario');
+  const estado = document.getElementById('diarioEstado');
+  const pista = document.getElementById('diarioPista');
+  if (!libro || !formulario) return;
+  const abrir = () => {
+    libro.classList.add('esta-abierto');
+    portada.setAttribute('aria-expanded', 'true');
+    const interior = document.getElementById('diarioAbierto');
+    if (interior) interior.setAttribute('aria-hidden', 'false');
+    if (pista) pista.textContent = '♡ Escribe tu idea en las páginas del diario';
+  };
+  const cerrar = () => {
+    libro.classList.remove('esta-abierto');
+    portada.setAttribute('aria-expanded', 'false');
+    const interior = document.getElementById('diarioAbierto');
+    if (interior) interior.setAttribute('aria-hidden', 'true');
+    if (pista) pista.textContent = '✳ Abre la portada para dejar tu mensaje';
+  };
+  document.querySelectorAll('[data-diario-abrir]').forEach(el => el.addEventListener('click', abrir));
+  document.querySelectorAll('[data-diario-cerrar]').forEach(el => el.addEventListener('click', cerrar));
+  formulario.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    if (!formulario.reportValidity()) return;
+    const campos = new FormData(formulario);
+    const nombre = String(campos.get('nombre') || '').trim();
+    const correo = String(campos.get('correo') || '').trim();
+    const asunto = String(campos.get('asunto') || '').trim();
+    const mensaje = String(campos.get('mensaje') || '').trim();
+    const cuerpo = `Nombre: ${nombre}\nCorreo: ${correo}\nProyecto: ${asunto}\n\n${mensaje}`;
+    if (EMAIL_DESTINO_DIARIO) {
+      window.location.href = `mailto:${EMAIL_DESTINO_DIARIO}?subject=${encodeURIComponent('Portafolio · ' + asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      estado.textContent = 'Se abrió tu correo para revisar y enviar el mensaje. Confirma el envío allí.';
+    } else {
+      try {
+        await navigator.clipboard.writeText(cuerpo);
+        estado.textContent = '¡Tu nota está copiada! Para recibir mensajes, configura tu correo en script.js.';
+      } catch (_) {
+        estado.textContent = 'Configura EMAIL_DESTINO_DIARIO en script.js para habilitar el envío por correo.';
+      }
+    }
+  });
+})();
+

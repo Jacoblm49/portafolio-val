@@ -658,21 +658,21 @@ img {
 }
 
 
-/* PROYECTO MÁGARA */
+/* PROYECTO .seis*/
 
-.magara {
+.seis {
     color: #fff9e9;
     background: #145a39;
 }
 
-.nombre-magara {
+.nombre- .seis{
     font-family: var(--cursiva);
     font-size: clamp(60px, 8vw, 100px);
     letter-spacing: -4px;
     transform: rotate(-7deg);
 }
 
-.magara .subtitulo {
+.seis .subtitulo {
     font-size: 9px;
     letter-spacing: 2px;
     margin-top: 20px;
@@ -6965,3 +6965,538 @@ dialog.hoja-proyecto::backdrop {
 
 
 
+
+
+/* ===== SOBRE MÍ: TEXTO | RETRATO | HABILIDADES ===== */
+#sobre-mi .sobre-mi-triple {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.15fr) minmax(0, .9fr);
+  gap: clamp(18px, 2.4vw, 44px);
+  align-items: center;
+  margin-top: 38px;
+}
+#sobre-mi .sobre-mi-triple > * {min-width: 0;}
+#sobre-mi .sobre-mi-presentacion h3 {font-size: clamp(25px, 2.3vw, 40px); line-height:1.22;}
+#sobre-mi .sobre-mi-presentacion > p {font-size:clamp(13px,1vw,15px);line-height:1.8;}
+#sobre-mi .sobre-mi-habilidades h3 {font-size: clamp(24px,2.4vw,36px); color:#171515;letter-spacing:-.035em;margin-bottom:22px;}
+#sobre-mi .sobre-mi-habilidades h3 span {color:#ee79ad;}
+#sobre-mi .sobre-mi-habilidades .skills-porcentajes {margin-top:0;gap:14px;}
+
+#sobre-mi .sobre-mi-retrato {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 660;
+    margin-inline: auto;
+    isolation: isolate;
+    overflow: visible;
+}
+
+#sobre-mi .retrato-persona {
+    position: absolute;
+    width: 108%;
+    height: 100%;
+    object-fit: contain;
+    inset: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    filter: none !important;
+    mix-blend-mode: normal;
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 79%, transparent 99%);
+    mask-image: linear-gradient(to bottom, black 0%, black 79%, transparent 99%);
+}
+
+#sobre-mi .retrato-trazos {position:absolute;inset:0;width:100%;height:100%; z-index:1;overflow:visible; fill:none;stroke:#f0bcab;stroke-width:8;stroke-linecap:round;opacity:.9;transform:rotate(-7deg);}
+#sobre-mi .retrato-estrella {position:absolute;width:22%;height:auto;aspect-ratio:1; overflow:visible;z-index:3;fill:#fb8b18;stroke:#fb8b18;stroke-width:3;stroke-linejoin:round;transform-origin:50% 50%;pointer-events:none;}
+#sobre-mi .estrella-rostro {width:32%;top:28%;left:49%;fill:none;stroke:#ef6331;stroke-width:6;z-index:4;animation:estrellaCara 3.8s ease-in-out infinite;}
+#sobre-mi .estrella-a {top:2%;left:2%;fill:#f37aab;stroke:#f37aab;transform:rotate(-16deg);}
+#sobre-mi .estrella-b {top:5%;right:1%;fill:#f37aab;stroke:#f37aab;transform:rotate(20deg);}
+#sobre-mi .estrella-c {bottom:22%;left:-7%;fill:#ffa315;stroke:#ffa315;transform:rotate(-10deg);}
+#sobre-mi .estrella-d {bottom:14%;right:-6%;fill:#f37aab;stroke:#f37aab;transform:rotate(17deg);}
+#sobre-mi .estrella-e {bottom:4%;left:22%;width:17%;fill:#ffa315;stroke:#ffa315;transform:rotate(-8deg);}
+@keyframes estrellaCara {0%,100%{transform:translate3d(0,0,0) rotate(-9deg)}50%{transform:translate3d(5px,-10px,0) rotate(8deg)}}
+@media(max-width:1100px){
+  #sobre-mi .sobre-mi-triple {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;}
+  #sobre-mi .sobre-mi-presentacion {grid-column:1;grid-row:1;}
+  #sobre-mi .sobre-mi-retrato {grid-column:2;grid-row:1 / span 2;}
+  #sobre-mi .sobre-mi-habilidades {grid-column:1;grid-row:2;}
+}
+@media(max-width:680px){
+  #sobre-mi .sobre-mi-triple {grid-template-columns:1fr;gap:22px;}
+  #sobre-mi .sobre-mi-presentacion {grid-column:1;grid-row:1;}
+  #sobre-mi .sobre-mi-retrato {grid-column:1;grid-row:2;max-width:420px;}
+  #sobre-mi .sobre-mi-habilidades {grid-column:1;grid-row:3;}
+  #sobre-mi .sobre-mi-presentacion h3 {font-size:clamp(26px,7vw,36px);}
+}
+@media(prefers-reduced-motion:reduce){#sobre-mi .estrella-rostro{animation:none;}}
+
+
+
+/* AJUSTES FINALES: FOTO SOBRE MÍ Y TIPOGRAFÍA DE REFERENCIA */
+@media (min-width:1101px) {
+  #sobre-mi .sobre-mi-triple {
+    grid-template-columns:minmax(0,0.95fr) minmax(0,1.38fr) minmax(0,.9fr);
+    gap:clamp(15px,2vw,30px);
+  }
+  #sobre-mi .sobre-mi-retrato {width:108%;max-width:570px;transform:translateX(-3%);}
+}
+#sobre-mi .firma-soy-val {
+  font-family:'Playfair Display', Georgia,serif;
+  font-style:italic;
+  font-weight:700;
+  color:#ea75aa;
+  letter-spacing:-.055em;
+  white-space:nowrap;
+}
+
+/* CONTACTO - DIARIO REALISTA (imágenes originales proporcionadas por el usuario) */
+#contacto.contacto-diario {background:#fff6f7;padding:90px var(--margen,6vw) 110px;overflow:hidden;}
+#contacto .contacto-diario-grid {display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:20px;}
+#contacto .contacto-retro-texto {max-width:720px;text-align:center;}
+#contacto .diario-kicker {font-size:11px;letter-spacing:.17em;font-weight:800;color:#d85c96;margin-bottom:12px;}
+#contacto .contacto-retro-texto h2 {font-size:clamp(42px,5vw,68px);line-height:1.05;margin:0 0 12px;color:#1d191d;}
+#contacto .contacto-retro-texto h2 em {font-family:'Playfair Display',Georgia,serif;font-weight:700;color:#e877ad;}
+#contacto .contacto-retro-texto>p:not(.diario-kicker) {font-size:15px;line-height:1.55;margin:0 auto;max-width:600px;color:#765869;}
+#contacto .diario-escena {width:100%;max-width:1060px;display:flex;align-items:center;flex-direction:column;gap:8px;overflow:visible;}
+#contacto .diario-levitador {width:100%;display:flex;justify-content:center;align-items:center;min-height:665px;animation:diarioLevita 5.2s ease-in-out infinite;}
+@keyframes diarioLevita {0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+#contacto .diario-libro {position:relative;width:min(100%,970px);height:650px;perspective:1400px;isolation:isolate;}
+#contacto .diario-portada {position:absolute;left:50%;top:50%;width:min(43%,365px);aspect-ratio:0.81;transform:translate(-50%,-50%) rotate(-3deg);padding:0;border:0;background:transparent;cursor:pointer;z-index:5;filter:drop-shadow(0 22px 17px #924e773d);transition:opacity .55s ease,transform .9s cubic-bezier(.18,.75,.23,1),visibility .55s;}
+#contacto .diario-portada img {display:block;width:100%;height:100%;object-fit:contain;}
+#contacto .diario-portada:hover {transform:translate(-50%,-52%) rotate(0deg) scale(1.035);}
+#contacto .diario-portada:focus-visible {outline:3px solid #bd3b78;border-radius:12px;}
+#contacto .diario-titulo-portada {position:absolute;left:8%;right:8%;top:39%;text-align:center;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(26px,3.9vw,48px);color:#fff9fc;font-weight:800;text-shadow:0 3px 2px #a93472,0 0 11px #a93472,1px 1px 1px #a93472;pointer-events:none;}
+#contacto .diario-invitacion {position:absolute;left:0;right:0;bottom:10%;text-align:center;font-size:10px;letter-spacing:.15em;font-weight:900;color:#fff;text-shadow:0 2px 4px #9e3766;pointer-events:none;}
+#contacto .diario-abierto {position:absolute;inset:0;display:block;opacity:0;visibility:hidden;transform:scale(.77) rotateX(12deg);transition:opacity .62s ease .25s, transform .85s cubic-bezier(.17,.8,.22,1),visibility .85s;pointer-events:none;}
+#contacto .diario-foto-abierto {position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 15px rgba(97,54,76,.18));pointer-events:none;}
+#contacto .diario-libro.esta-abierto .diario-portada {opacity:0;visibility:hidden;transform:translate(-97%,-50%) rotateY(-85deg) scale(.9);pointer-events:none;}
+#contacto .diario-libro.esta-abierto .diario-abierto {opacity:1;visibility:visible;transform:scale(1) rotateX(0);pointer-events:auto;}
+/* Textos y formulario sobre las hojas de la fotografía; no están incrustados en ella. */
+#contacto .diario-pagina-izquierda {position:absolute;left:13%;top:24%;width:31%;height:54%;color:#754663;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:17px;}
+#contacto .diario-etiqueta-interior {font-size:11px;font-weight:900;letter-spacing:.1em;color:#c35c92;}
+#contacto .diario-pagina-izquierda h3 {font-size:clamp(24px,3.1vw,38px);line-height:1.1;color:#34232e;margin:0;}
+#contacto .diario-pagina-izquierda h3 em {font-family:'Playfair Display',Georgia,serif;color:#db6d9e;}
+#contacto .diario-pagina-izquierda>p:not(.diario-etiqueta-interior) {font-size:clamp(12px,1.4vw,16px);line-height:1.65;}
+#contacto .diario-firma {font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:19px;color:#c55b91;}
+#contacto .diario-pagina-derecha {position:absolute;left:55%;top:22%;width:31%;height:59%;display:flex;align-items:stretch;}
+#contacto .diario-cerrar {position:absolute;right:-12%;top:-13%;width:34px;height:34px;cursor:pointer;border:1px solid #e49cbd;background:#fff7fa;color:#8c3e69;border-radius:50%;font-size:18px;z-index:2;}
+#contacto .diario-formulario {width:100%;height:100%;display:flex;flex-direction:column;gap:4px;min-height:0;}
+#contacto .diario-formulario label {font-size:11px;font-weight:800;color:#8b496b;margin-top:5px;}
+#contacto .diario-formulario input,#contacto .diario-formulario textarea {width:100%;font-family:inherit;font-size:13px;box-sizing:border-box;background:rgba(255,255,255,.72);color:#37233a;border:1px solid #ebc8df;border-radius:7px;padding:7px 9px;min-width:0;outline:none;}
+#contacto .diario-formulario input:focus,#contacto .diario-formulario textarea:focus {border-color:#e36ba2;box-shadow:0 0 0 2px #e36ba230;}
+#contacto .diario-formulario textarea {min-height:60px;resize:vertical;}
+#contacto .diario-enviar {padding:10px 8px;background:#db6b9f;border:0;border-radius:8px;color:white;font-size:11px;font-weight:900;cursor:pointer;margin-top:5px;}
+#contacto .diario-enviar:hover {background:#c4538e;}
+#contacto .diario-estado {min-height:12px;color:#9b446d;font-size:10px;line-height:1.2;}
+#contacto .diario-pista {text-align:center;color:#a85c7f;font-size:12px;}
+@media(max-width:800px){
+  #contacto.contacto-diario {padding:65px 16px 85px;}
+  #contacto .diario-libro {height:520px;}
+  #contacto .diario-levitador {min-height:535px;}
+  #contacto .diario-portada {width:min(52%,340px);}
+  #contacto .diario-pagina-izquierda {gap:6px;top:26%;}
+  #contacto .diario-pagina-izquierda h3 {font-size:22px;}
+  #contacto .diario-etiqueta-interior,#contacto .diario-pagina-izquierda>p:not(.diario-etiqueta-interior) {font-size:11px;}
+  #contacto .diario-firma {font-size:13px;}
+  #contacto .diario-pagina-derecha {top:20%;height:64%;}
+  #contacto .diario-formulario {gap:1px;}
+  #contacto .diario-formulario label {font-size:9px;margin-top:2px;}
+  #contacto .diario-formulario input,#contacto .diario-formulario textarea {padding:5px;font-size:10px;}
+  #contacto .diario-formulario textarea {min-height:40px;}
+  #contacto .diario-enviar {font-size:9px;padding:7px 4px;}
+}
+@media(max-width:580px){
+  #contacto .diario-libro {height:auto;min-height:470px;}
+  #contacto .diario-levitador {min-height:510px;}
+  #contacto .diario-portada {top:220px;width:min(74%,270px);}
+  #contacto .diario-titulo-portada {font-size:35px;}
+  #contacto .diario-abierto {position:relative;min-height:670px;}
+  #contacto .diario-foto-abierto {position:relative;width:100%;height:auto;display:block;}
+  #contacto .diario-pagina-izquierda {left:15%;top:8%;width:70%;height:auto;min-height:90px;text-align:center;align-items:center;gap:4px;}
+  #contacto .diario-pagina-izquierda h3 {font-size:22px;}
+  #contacto .diario-pagina-izquierda>p:not(.diario-etiqueta-interior) {display:none;}
+  #contacto .diario-firma {display:none;}
+  #contacto .diario-pagina-derecha {position:relative;left:auto;top:auto;width:min(100%,410px);height:auto;min-height:0;margin:12px auto 0;background:#fffafc;border:1px solid #eacbdf;box-shadow:0 8px 18px #b56a8c21;border-radius:14px;padding:18px;}
+  #contacto .diario-cerrar {right:12px;top:10px;}
+  #contacto .diario-formulario {gap:6px;padding-top:13px;}
+  #contacto .diario-formulario label {font-size:12px;margin-top:5px;}
+  #contacto .diario-formulario input,#contacto .diario-formulario textarea {font-size:16px;padding:10px;}
+  #contacto .diario-formulario textarea {min-height:100px;}
+  #contacto .diario-enviar {font-size:12px;padding:12px;}
+  #contacto .diario-libro.esta-abierto {min-height:700px;}
+}
+@media(prefers-reduced-motion:reduce){#contacto .diario-levitador{animation:none}#contacto .diario-portada,#contacto .diario-abierto{transition:none}}
+
+
+/* =====================================================
+   AJUSTE SOLICITADO: DIARIO GRANDE Y TÍTULO DISCRETO
+   Solo afecta a la sección de contacto.
+===================================================== */
+@media (min-width: 801px) {
+  #contacto.contacto-diario {
+    padding: 55px clamp(12px, 2vw, 36px) 75px;
+  }
+  #contacto .contacto-diario-grid {
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  #contacto .diario-escena {
+    width: 100%;
+    max-width: 1600px;
+  }
+  #contacto .diario-levitador {
+    width: 100%;
+    min-height: 0;
+  }
+  #contacto .diario-libro {
+    width: min(100%, 1500px);
+    height: auto;
+    aspect-ratio: 1.49 / 1;
+  }
+  #contacto .diario-portada {
+    width: min(44%, 610px);
+  }
+  #contacto .diario-titulo-portada {
+    font-size: clamp(19px, 2.35vw, 32px);
+    top: 42%;
+  }
+  #contacto .diario-pagina-izquierda h3 {
+    font-size: clamp(27px, 3.3vw, 47px);
+  }
+  #contacto .diario-pagina-izquierda > p:not(.diario-etiqueta-interior) {
+    font-size: clamp(13px, 1.3vw, 18px);
+  }
+  #contacto .diario-formulario {
+    gap: clamp(4px, .6vw, 10px);
+  }
+  #contacto .diario-formulario label {
+    font-size: clamp(11px, .95vw, 15px);
+    margin-top: 6px;
+  }
+  #contacto .diario-formulario input,
+  #contacto .diario-formulario textarea {
+    font-size: clamp(13px, 1.1vw, 17px);
+    padding: clamp(7px, .8vw, 12px);
+  }
+  #contacto .diario-formulario textarea {
+    min-height: clamp(62px, 6vw, 95px);
+  }
+  #contacto .diario-enviar {
+    font-size: clamp(11px, .95vw, 15px);
+    padding: clamp(9px, .9vw, 14px);
+  }
+}
+@media (min-width: 581px) and (max-width: 800px) {
+  #contacto .diario-escena {max-width: 100%;}
+  #contacto .diario-libro {width:100%;height:auto;aspect-ratio:1.49 / 1;}
+  #contacto .diario-levitador {min-height:0;}
+  #contacto .diario-portada {width:47%;}
+  #contacto .diario-titulo-portada {font-size:clamp(17px,2.7vw,24px);top:42%;}
+}
+@media (max-width: 580px) {
+  #contacto .diario-portada {width:min(83%, 360px);}
+  #contacto .diario-titulo-portada {font-size:clamp(20px, 5vw, 26px);top:42%;}
+}
+
+/* ==========================================================
+   CONTACTO / COMPOSICION EDITORIAL (CORRECCION DE SELECTORES)
+   La clase real del texto es .contacto-retro-texto
+   ========================================================== */
+@media (min-width: 901px) {
+  #contacto.contacto-diario {
+    min-height: 100vh;
+    overflow: hidden;
+    isolation: isolate;
+    position: relative;
+    padding: 65px clamp(24px, 4vw, 85px) 55px;
+  }
+  #contacto .contacto-diario-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    min-height: min(82vh, 850px);
+    margin: 0 auto;
+    position: relative;
+    max-width: 1780px;
+  }
+  #contacto .contacto-retro-texto {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    padding: 0 clamp(4px, 1.5vw, 25px) 0 0;
+    margin: 0;
+    transition: opacity .7s ease, transform .8s ease, filter .7s ease;
+  }
+  #contacto .contacto-retro-texto h2 {
+    font-size: clamp(52px, 5.1vw, 96px);
+    line-height: 1.04;
+    margin: 15px 0 24px;
+  }
+  #contacto .contacto-retro-texto > p:not(.diario-kicker) {
+    margin: 0;
+    font-size: clamp(14px, 1.2vw, 19px);
+    max-width: 470px;
+    text-align: left;
+  }
+  #contacto .diario-escena {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 3;
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    overflow: visible;
+    transform: translateX(0);
+    transition: transform .9s cubic-bezier(.2,.8,.2,1);
+  }
+  #contacto .diario-levitador {
+    width: 100%;
+    overflow: visible;
+  }
+  #contacto .diario-libro {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 1.49 / 1;
+    height: auto;
+    overflow: visible;
+  }
+  #contacto .diario-portada {
+    width: 56%;
+    max-width: 570px;
+  }
+  #contacto .diario-pista {
+    font-size: 12px;
+  }
+  /* El libro entero se desplaza hacia el titulo al abrirse */
+  #contacto:has(.diario-libro.esta-abierto) .diario-escena {
+    transform: translateX(-23%) scale(1.16);
+    z-index: 5;
+  }
+  #contacto:has(.diario-libro.esta-abierto) .contacto-retro-texto {
+    opacity: .16;
+    transform: translateX(-30px);
+    filter: blur(2px);
+    pointer-events: none;
+  }
+  #contacto .diario-portada {z-index: 8;}
+  #contacto .diario-abierto {z-index: 7;}
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  #contacto .contacto-diario-grid {grid-template-columns: 42% 58%;}
+  #contacto .contacto-retro-texto h2 {font-size: clamp(45px, 4.7vw, 68px);}
+  #contacto:has(.diario-libro.esta-abierto) .diario-escena {transform: translateX(-17%) scale(1.08);}
+}
+@media (max-width: 900px) {
+  #contacto .contacto-diario-grid {display:flex;flex-direction:column;align-items:center;}
+  #contacto .contacto-retro-texto {text-align:center;}
+  #contacto .contacto-retro-texto > p:not(.diario-kicker) {margin-inline:auto;}
+  #contacto .diario-escena {transform:none;}
+}
+
+
+/* FONDO PERSONALIZADO DE CONTACTO */
+
+#contacto {
+  background-image: url("Img/estrellas.png") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #fff8fa;
+}
+
+/* IMAGEN EN ESQUINA INFERIOR IZQUIERDA */
+
+#servicios {
+  position: relative;
+}
+
+#servicios .servicios-imagen {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 420px;
+  max-width: 40%;
+
+  margin: 0;
+  z-index: 2;
+}
+
+#servicios .servicios-imagen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+  #servicios .servicios-imagen {
+    position: relative;
+    width: 260px;
+    max-width: 100%;
+    left: 0;
+    bottom: auto;
+    margin-top: 25px;
+  }
+  
+/* AUMENTAR TAMAÑO DE SOY VAL */
+
+#sobre-mi .sobre-mi-presentacion h3 .firma-soy-val {
+    display: block !important;
+    font-size: 90px !important;
+    line-height: 1.1 !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
+    color: #ea75aa !important;
+    margin-bottom: 15px !important;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 680px) {
+    #sobre-mi .sobre-mi-presentacion h3 .firma-soy-val {
+        font-size: clamp(55px, 12vw, 75px) !important;
+    }
+}
+
+}
+
+
+/* ===== PERSONALIZACIÓN DE CARPETAS + ANIMACIÓN PAPEL / NOV 2026 ===== */
+@keyframes hojaArrugadaAbriendo {
+  0% {opacity:0;transform:perspective(1300px) rotateX(-36deg) rotateZ(-6deg) skew(7deg,-5deg) scale(.66,.28);clip-path:polygon(4% 18%,20% 4%,46% 15%,69% 1%,99% 18%,91% 74%,69% 97%,48% 84%,14% 99%,0 70%);filter:contrast(1.2) brightness(.85)}
+  36% {opacity:1;transform:perspective(1300px) rotateX(13deg) rotateZ(2deg) skew(-3deg,1deg) scale(.92,.86);clip-path:polygon(0 4%,22% 0,48% 4%,72% 0,100% 5%,98% 97%,74% 94%,48% 100%,16% 96%,0 100%);filter:brightness(.96)}
+  73% {transform:perspective(1300px) rotateX(-4deg) rotateZ(-.5deg) scale(1.012);clip-path:inset(0);filter:none}
+  100% {opacity:1;transform:none;clip-path:inset(0);filter:none}
+}
+@keyframes plieguesHoja {
+  0%,25% {opacity:.85}
+  60% {opacity:.35}
+  100% {opacity:0}
+}
+dialog#hojaProyecto[open] {transform-origin:center 40%;animation:hojaArrugadaAbriendo .95s cubic-bezier(.21,.72,.26,1) both;}
+dialog#hojaProyecto .hoja-contenido {position:relative;}
+dialog#hojaProyecto[open] .hoja-contenido::before {
+  content:"";position:absolute;inset:0;z-index:8;pointer-events:none;
+  background:linear-gradient(128deg,transparent 17%,#55384440 17.3%,#ffffffa0 17.8%,transparent 19%),linear-gradient(33deg,transparent 41%,#53354035 41.4%,#ffffff8c 42%,transparent 43%),linear-gradient(158deg,transparent 69%,#56394335 69.4%,#ffffff88 70%,transparent 71%);
+  animation:plieguesHoja .95s ease-out forwards;
+}
+@media(prefers-reduced-motion:reduce) {
+  dialog#hojaProyecto[open],dialog#hojaProyecto[open] .hoja-contenido::before {animation:none!important;}
+}
+
+/* ===== FORMULARIO CENTRADO EN LA HOJA DERECHA DEL DIARIO ===== */
+#contacto .diario-pagina-derecha {box-sizing:border-box;top:21%;left:55%;width:30%;height:62%;min-width:0;}
+#contacto .diario-formulario {box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;width:100%;height:100%;min-height:0;gap:2px;}
+#contacto .diario-formulario label {margin:0;line-height:1.15;flex:0 0 auto;}
+#contacto .diario-formulario input,#contacto .diario-formulario textarea {box-sizing:border-box;width:100%;min-width:0;max-width:100%;flex-shrink:1;}
+#contacto .diario-formulario textarea {min-height:28px;flex:1 1 45px;resize:none;}
+#contacto .diario-enviar {flex:0 0 auto;margin-top:2px;}
+#contacto .diario-estado {flex:0 0 auto;min-height:0;margin:0;}
+@media(min-width:801px) {
+  #contacto .diario-pagina-derecha {top:21%;left:55%;width:30%;height:62%;}
+  #contacto .diario-formulario {gap:clamp(1px,.23vw,4px);}
+  #contacto .diario-formulario label {font-size:clamp(9px,.83vw,13px);}
+  #contacto .diario-formulario input,#contacto .diario-formulario textarea {font-size:clamp(10px,.95vw,14px);padding:clamp(4px,.45vw,8px);}
+  #contacto .diario-enviar {font-size:clamp(9px,.8vw,12px);padding:clamp(6px,.54vw,10px);}
+}
+@media(min-width:581px) and (max-width:800px) {
+  #contacto .diario-pagina-derecha {position:absolute;left:55%;top:19%;width:30%;height:65%;}
+  #contacto .diario-formulario {gap:1px;}
+  #contacto .diario-formulario label {font-size:9px;}
+  #contacto .diario-formulario input,#contacto .diario-formulario textarea {padding:4px;font-size:10px;}
+  #contacto .diario-enviar {padding:5px;font-size:9px;}
+}
+@media(max-width:580px) {
+  /* En pantallas pequeñas se muestra ampliada la hoja derecha real. */
+  #contacto .diario-libro.esta-abierto {width:100%;height:auto;min-height:0;aspect-ratio: 1 / 1.35;overflow:hidden;}
+  #contacto .diario-libro.esta-abierto .diario-abierto {position:absolute;inset:0;min-height:0;transform:none;}
+  #contacto .diario-libro.esta-abierto .diario-foto-abierto {position:absolute;top:0;left:-95%;width:200%;height:100%;object-fit:contain;max-width:none;}
+  #contacto .diario-libro.esta-abierto .diario-pagina-izquierda {display:none;}
+  #contacto .diario-libro.esta-abierto .diario-pagina-derecha {position:absolute;top:22%;left:12%;width:76%;height:60%;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;}
+  #contacto .diario-libro.esta-abierto .diario-formulario {padding:0;gap:3px;}
+  #contacto .diario-libro.esta-abierto .diario-formulario label {font-size:clamp(10px,2.7vw,13px);}
+  #contacto .diario-libro.esta-abierto .diario-formulario input,#contacto .diario-libro.esta-abierto .diario-formulario textarea {font-size:16px;padding:5px 7px;min-height:0;}
+  #contacto .diario-libro.esta-abierto .diario-formulario textarea {flex:1 1 48px;}
+  #contacto .diario-libro.esta-abierto .diario-enviar {font-size:11px;padding:9px 6px;margin:0;}
+  #contacto .diario-libro.esta-abierto .diario-cerrar {top:-22%;right:-11%;}
+}
+.imagen-proyecto {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+/* Fotos independientes, debajo del bloque de información de cada carpeta. */
+#fotosDebajoProyecto { display: grid; gap: 24px; margin-top: 24px; }
+#fotosDebajoProyecto[hidden] { display: none; }
+#fotosDebajoProyecto img { display: block; width: 100%; height: auto; margin: 0; }
+/* Carrusel curvo: solo afecta a la galería. */
+#galeria .galeria-abanico-escena { height: clamp(340px, 48vw, 570px); margin-top: 0; overflow: hidden; perspective: 1100px; }
+#galeria .galeria-abanico, #galeria .galeria-abanico:hover { position: relative; inset: auto; width: 100%; height: 100%; margin: 0; animation: none; transform: none; perspective: 1100px; }
+#galeria .galeria-abanico .abanico-foto { position: absolute; left: 50%; top: 50%; bottom: auto; width: clamp(200px, 29vw, 350px); height: clamp(280px, 39vw, 460px); margin: 0; transform-origin: center; animation: none; transition: none; will-change: transform; }
+#galeria .galeria-abanico .abanico-foto img { object-fit: contain; }
+#galeria .galeria-disco { display: none; }
+
+/* Superficie curva real; mantiene las imágenes y el visor originales. */
+#galeria .galeria-abanico-escena { background: #000; height: clamp(310px, 45vw, 590px); isolation: isolate; }
+#galeria .carrusel-superficie { display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: pointer; }
+#galeria .curva-activa .galeria-abanico { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+#galeria .curva-activa:focus-within { outline: 2px solid #ef90b8; outline-offset: 3px; }
+
+/* Galería flotante inspirada en la referencia de video. Solo modifica #galeria. */
+#galeria .galeria-portada-header { display: none; }
+#galeria .galeria-abanico-escena.galeria-flotante {
+  position: relative; height: clamp(480px, 55vw, 720px); overflow: hidden;
+  background: #191717; margin: 0; perspective: none; isolation: isolate;
+}
+#galeria .galeria-flotante .galeria-abanico,
+#galeria .galeria-flotante .galeria-abanico:hover {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0;
+  transform: none; animation: none; perspective: none; overflow: visible;
+}
+#galeria .galeria-flotante .galeria-abanico .abanico-foto {
+  position: absolute; left: 0; top: 0; bottom: auto; height: clamp(175px,22vw,265px);
+  margin: 0; padding: 0; border: 0; border-radius: 15px; overflow: hidden;
+  animation: none; transition: box-shadow .2s; transform-origin: center;
+  box-shadow: 0 12px 28px #0004; cursor: pointer;
+}
+#galeria .galeria-flotante .abanico-foto img {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
+  border: 0; border-radius: 0; filter: brightness(.76);
+}
+#galeria .galeria-flotante .abanico-foto:hover img,
+#galeria .galeria-flotante .abanico-foto:focus-visible img { filter: brightness(1); }
+#galeria .galeria-flotante .abanico-foto figcaption { display: none; }
+#galeria .galeria-flotante .titulo-galeria-central {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; margin: 0; padding: 24px; z-index: 10;
+  pointer-events: none; transform: none; opacity: 1; animation: none;
+}
+#galeria .titulo-galeria-central .galeria-bloque-rosa { display: none; }
+#galeria .titulo-galeria-central h2 {
+  position: static; margin: 0; padding: 0; color: #ffe0ec; text-align: center;
+  font-size: clamp(50px,9vw,138px); line-height: .95; letter-spacing: -.055em;
+  transform: none; text-shadow: 0 3px 26px #19171799;
+}
+#galeria .titulo-galeria-central h2 em { color: inherit; }
+#galeria .galeria-flotante .galeria-disco { display: none; }
+@media(max-width:600px) {
+  #galeria .galeria-abanico-escena.galeria-flotante { height: 540px; }
+  #galeria .galeria-flotante .abanico-foto { max-width: 145px; }
+  #galeria .titulo-galeria-central h2 { font-size: clamp(48px,12vw,72px); }
+}
+#galeria .galeria-flotante .abanico-foto img { transform: scale(1.18); }
