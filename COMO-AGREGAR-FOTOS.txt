@@ -1,0 +1,17 @@
+FOTOS AL FINAL DE CADA CARPETA
+
+1. Guarda tus imágenes en Img (o una subcarpeta dentro de Img).
+2. Abre script.js y busca: const fotosDebajo
+3. Añade las rutas a la lista de tu proyecto. Ejemplo:
+
+amano: ["Img/foto1.jpg", "Img/foto2.png"],
+
+magara = .Seis
+amano = Publicidad
+grafico = Otra mirada
+publicidad = Redes
+
+Las fotos aparecen debajo de todo el bloque rosado, sin mover el título ni el párrafo.
+Una lista vacía [] no muestra fotos ni reserva espacio.
+Respeta mayúsculas, minúsculas y extensiones del nombre real del archivo.
+No modifiques imagenes: si quieres conservar las imágenes superiores.

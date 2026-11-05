@@ -1,0 +1,1 @@
+CONTACTO DINAMICO: El texto Querido diario aparece a la izquierda, el diario a la derecha. Al abrir el diario se desplaza y cubre parcialmente el texto. Los ajustes estan al final de estilo.css. Se conservaron los demas archivos. El fondo personalizado que hayas puesto en tu copia local deberas replicarlo si no estaba en la version ZIP base.

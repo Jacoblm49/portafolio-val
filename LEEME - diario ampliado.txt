@@ -1,0 +1,5 @@
+AJUSTES EN CONTACTO
+- Diario ampliado para utilizar casi todo el ancho disponible en computadores.
+- Título Contáctame más pequeño.
+- En móviles el diario se ajusta al tamaño de pantalla.
+- Sin cambios en las otras secciones.

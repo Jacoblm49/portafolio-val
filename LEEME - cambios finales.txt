@@ -1,0 +1,11 @@
+FINAL DE PORTAFOLIO
+
+Abre index.html para revisar la web.
+
+Cambios limitados a:
+- Contacto: diario flotante de peluche con portada «Contáctame», apertura de 180 grados y formulario a la derecha.
+- Sobre mí: foto ligeramente más grande en escritorio y «Soy Valentina» en Playfair Display cursiva rosa.
+
+El formulario usa la configuración EMAIL_DESTINO_DIARIO al final de script.js. Escribe allí tu dirección de correo real para abrir un mensaje listo para enviar desde la aplicación del visitante. Sin correo configurado, se copia el mensaje, pero NO se envía.
+
+No se aplican filtros a la fotografía. La portada tiene textura generada con CSS.

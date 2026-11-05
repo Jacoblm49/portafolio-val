@@ -1,0 +1,8 @@
+ACTUALIZACIÓN DEL DIARIO REALISTA
+
+- Portada: Img/diario_cerrado_realista.png
+- Interior abierto: Img/diario_abierto_realista.png (foto enviada por ti)
+- Para abrir: haz clic sobre la portada. Para cerrar: botón X.
+- Formulario HTML superpuesto sobre la página derecha (en teléfonos se muestra debajo para facilitar escritura).
+- El formulario NO envía automáticamente. Configura EMAIL_DESTINO_DIARIO en script.js para abrir el correo preparado.
+- El resto del portafolio permanece igual.
