@@ -113,9 +113,9 @@
     // FOTOS DEBAJO DE “DETRÁS DE LA IDEA”.
     // Añade rutas entre comillas, separadas por comas, en cada proyecto.
     const fotosDebajo = {
-      magara: ["Img/SEIIIIIIS.jpeg"], // Carpeta .Seis
-      amano: [],                     // Carpeta Publicidad
-      grafico: [],                   // Carpeta Otra mirada
+      magara: ["Img/SEIIIIIIS.jpeg","Img/Modales/Punto seis.jpeg", "Img/Modales/Punto seis 2.jpeg"], // Carpeta .Seis
+      amano: ["img/Modales/Redes 1.jpg","img/Modales/Redes 2.jpeg","img/Modales/Redes 3.jpeg","img/Modales/Redes 4.jpeg","img/Modales/Redes 5.jpeg","img/Modales/Redes 6.jpeg","img/Modales/Redes 7.jpeg"],                     // Carpeta Publicidad
+      grafico: ["img/Modales/Feid 1.png","img/Modales/Feid 2.png","img/Modales/Feid 3.png","img/Modales/Revista bad bunny 1.png","img/Modales/Revista bad bunny 2.png","img/Modales/Revista bad bunny 3.png","img/Modales/Revista bad bunny 4.png","img/Modales/Frater 1.png","img/Modales/Frater 2.png","img/Modales/Frater 3.png","img/Modales/Frater 4.png"],                   // Carpeta Otra mirada
       publicidad: []                 // Carpeta Redes
     };
 
@@ -134,7 +134,6 @@
         imagenes: [
           {
              src: "Img/puntoseis.png",
-          
             nombre: "Aplicación de marca"
           }
         ]
@@ -177,7 +176,7 @@
       },
 
       publicidad: {
-        titulo: "Redes",
+        titulo: "Audiovisual",
         categoria: "04 / REDES",
 
         descripcion:
