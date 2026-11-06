@@ -7516,7 +7516,7 @@ dialog#hojaProyecto[open] .hoja-contenido::before {
 #galeria .galeria-flotante .galeria-disco { display: none; }
 @media(max-width:600px) {
   #galeria .galeria-abanico-escena.galeria-flotante { height: 540px; }
-  #galeria .galeria-flotante .abanico-foto { max-width: 145px; }
+  #galeria .galeria-flotante .abanico-foto { min-width: 405px !important; min-height: 550px !important; }
   #galeria .titulo-galeria-central h2 { font-size: clamp(48px,12vw,72px); }
 }
 #galeria .galeria-flotante .abanico-foto img { transform: scale(1.18); }

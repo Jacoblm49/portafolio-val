@@ -33,10 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if(!pausa&&!visor?.open&&!document.hidden&&!reducir.matches) avance+=dt*.000025;
     const ancho=escena.clientWidth,alto=escena.clientHeight;
     const tarjeta=Math.min(210,Math.max(125,ancho*.18));
-    const recorrido=ancho+tarjeta*2;
+    const espacioExtra=tarjeta*40;
+    const recorrido=ancho+(tarjeta+espacioExtra)*2;
     fotos.forEach((foto,i)=>{
       const posicion=((i/fotos.length+avance)%1+1)%1;
-      const x=posicion*recorrido-tarjeta;
+      const x=posicion*recorrido-(tarjeta+espacioExtra);
       const y=alturas[i%alturas.length]*alto;
       foto.style.width=tarjeta+'px';
       foto.style.transform=`translate(-50%,-50%) translate(${x}px,${y}px) rotate(${rotaciones[i%rotaciones.length]}deg)`;
