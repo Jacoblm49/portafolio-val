@@ -113,16 +113,25 @@
     // FOTOS DEBAJO DE “DETRÁS DE LA IDEA”.
     // Añade rutas entre comillas, separadas por comas, en cada proyecto.
     const fotosDebajo = {
-      magara: ["Img/SEIIIIIIS.jpeg","Img/Modales/Punto seis.jpeg", "Img/Modales/Punto seis 2.jpeg"], // Carpeta .Seis
-      amano: ["img/Modales/Redes 1.jpg","img/Modales/Redes 2.jpeg","img/Modales/Redes 3.jpeg","img/Modales/Redes 4.jpeg","img/Modales/Redes 5.jpeg","img/Modales/Redes 6.jpeg","img/Modales/Redes 7.jpeg"],                     // Carpeta Publicidad
-      grafico: ["img/Modales/Feid 1.png","img/Modales/Feid 2.png","img/Modales/Feid 3.png","img/Modales/Revista bad bunny 1.png","img/Modales/Revista bad bunny 2.png","img/Modales/Revista bad bunny 3.png","img/Modales/Revista bad bunny 4.png","img/Modales/Frater 1.png","img/Modales/Frater 2.png","img/Modales/Frater 3.png","img/Modales/Frater 4.png"],                   // Carpeta Otra mirada
+      magara: ["Img/Modales/Punto seis 2.jpeg", "Img/puntoseis.png","Img/SEIIIIIIS.jpeg","Img/Modales/Punto seis.jpeg"], // Carpeta .Seis
+      amano: ["img/Modales/Redes 1.jpg","img/Modales/Redes 7.jpeg","img/Modales/Redes 3.jpeg","img/Modales/Redes 4.jpeg","img/Modales/Redes 5.jpeg","img/Modales/Redes 6.jpeg"],                     // Carpeta Publicidad
+      grafico: ["img/Modales/Feid 1.png","img/Modales/Feid 2.png","img/Modales/Feid 3.png","img/Modales/Feid 4.jpeg","img/Modales/Revista bad bunny 1.png","img/Modales/Revista bad bunny 2.png","img/Modales/Revista bad bunny 3.png","img/Modales/Revista bad bunny 4.png","img/Modales/Frater 1.png","img/Modales/Frater 2.png","img/Modales/Frater 3.png","img/Modales/Frater 4.png"],                   // Carpeta Otra mirada
       publicidad: []                 // Carpeta Redes
+    };
+
+    // VIDEOS DEBAJO DE “DETRÁS DE LA IDEA”.
+    // Solo se renderiza para el proyecto especificado.
+    const videosDebajo = {
+      magara: [],
+      amano: [],
+      grafico: [],
+      publicidad: ["Img/Modales/Video Magara (1).mp4", "Img/Modales/WhatsApp Video 2026-11-05 at 7.33.42 PM.mp4", "Img/Modales/WhatsApp Video 2026-11-05 at 7.35.46 PM.mp4","Img/Modales/aguadecoco.mp4"]
     };
 
     const proyectos = {
 
       magara: {
-        titulo: ".Seis",
+        titulo: "",
         categoria: "01 / BRANDING",
 
         descripcion:
@@ -133,14 +142,14 @@
 
         imagenes: [
           {
-             src: "Img/puntoseis.png",
+            src: "Img/Modales/BrandingPortada.jpeg",
             nombre: "Aplicación de marca"
           }
         ]
       },
 
       amano: {
-        titulo: "Publicidad",
+        titulo: "",
         categoria: "02 / PUBLICIDAD",
 
         descripcion:
@@ -151,14 +160,14 @@
 
         imagenes: [
           {
-            src: "Img/amano.jpeg",
+            src: "Img/Modales/PublicidadPortada.jpeg",
             nombre: "Dirección de arte"
           }
         ]
       },
 
       grafico: {
-        titulo: "Otra mirada",
+        titulo: "",
         categoria: "03 / EDITORIAL",
 
         descripcion:
@@ -169,14 +178,14 @@
 
         imagenes: [
           {
-            src: "Img/Revista Fraternos en sala retro musical.png",
+            src: "Img/Modales/EditorialPortada.jpeg",
             nombre: "Diseño editorial"
           }
         ]
       },
 
       publicidad: {
-        titulo: "Audiovisual",
+        titulo: "",
         categoria: "04 / REDES",
 
         descripcion:
@@ -187,7 +196,7 @@
 
         imagenes: [
           {
-            src: "Img/SEIIIIIIS.jpeg",
+            src: "Img/Modales/AuidovisualPortada.jpeg",
             nombre: "Comunicación publicitaria"
           }
         ]
@@ -285,6 +294,7 @@
 
       const fotosInferiores = document.getElementById("fotosDebajoProyecto");
       fotosInferiores.replaceChildren();
+
       (fotosDebajo[id] || []).forEach((ruta) => {
         const foto = document.createElement("img");
         foto.src = ruta;
@@ -292,6 +302,15 @@
         foto.loading = "lazy";
         fotosInferiores.appendChild(foto);
       });
+
+      (videosDebajo[id] || []).forEach((ruta) => {
+        const video = document.createElement("video");
+        video.src = ruta;
+        video.controls = true;
+        video.style.maxWidth = "100%";
+        fotosInferiores.appendChild(video);
+      });
+
       fotosInferiores.hidden = !fotosInferiores.children.length;
 
       // Abrir una sola vez.

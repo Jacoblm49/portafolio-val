@@ -7453,7 +7453,10 @@ dialog#hojaProyecto[open] .hoja-contenido::before {
   margin-top: 20px;
 }
 /* Fotos independientes, debajo del bloque de información de cada carpeta. */
-#fotosDebajoProyecto { display: grid; gap: 24px; margin-top: 24px; }
+#fotosDebajoProyecto { 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  }
 #fotosDebajoProyecto[hidden] { display: none; }
 #fotosDebajoProyecto img { display: block; width: 100%; height: auto; margin: 0; }
 /* Carrusel curvo: solo afecta a la galería. */

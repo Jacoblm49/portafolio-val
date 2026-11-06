@@ -106,7 +106,7 @@
 .control-musica-fondo {
   position: fixed;
   right: 18px;
-  bottom: 18px;
+  top: 18px;
   z-index: 1000;
   padding: 10px 14px;
   border: 1px solid #851c2b;
